@@ -1,0 +1,9 @@
+#divisor {
+    height: 2px;
+    width: 100%;
+
+    border-radius: 1%;
+    box-shadow: 1%;
+    background-color: #dfc6eb;
+    margin-bottom: 1px;
+}
