@@ -62,7 +62,7 @@ function App() {
       <div>
       <BrowserRouter>
           <Routes>
-            <Route path="/" element={<null />} />
+            <Route path="/" element={<Footer />} />
           </Routes>
         </BrowserRouter>
       </div>
