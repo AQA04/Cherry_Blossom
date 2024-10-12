@@ -6,10 +6,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 /*-----Components-----*/
 import './App.css'
 import Menu from './menu/Menu'
-import Carrusel from './carrusel/Carrusel'
-import AboutUs from './aboutUs/AboutUs';
+import Carrusel from './screens/Home/carrusel/Carrusel'
+import AboutUs from './screens/Home/aboutUs/AboutUs';
 import Footer from './footer/Footer';
-import Productos from './products/Productos';
+import Productos from './screens/Home/products/Productos';
 
 function App() {
 

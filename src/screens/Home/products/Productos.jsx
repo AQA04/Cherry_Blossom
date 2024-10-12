@@ -1,9 +1,9 @@
 import React from 'react'
 import './Productos.css'
-import estuche from '../components/estucheEjemplo.jpg'
-import lienzo from '../components/lienzoEjemplo.jpg'
-import acrilico from '../components/acrilicoEjemplo.jpg'
-import digital from '../components/digitalEjemplo.jpg'
+import estuche from '/src/components/estucheEjemplo.jpg'
+import lienzo from '/src/components/lienzoEjemplo.jpg'
+import acrilico from '/src/components/acrilicoEjemplo.jpg'
+import digital from '/src/components/digitalEjemplo.jpg'
 
 
 export default function Productos() {
