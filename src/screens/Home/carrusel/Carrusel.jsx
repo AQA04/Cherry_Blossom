@@ -1,9 +1,9 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import banner1 from '../components/banner1.png';
-import banner2 from '../components/banner2.png';
-import banner3 from '../components/banner3.png';
-import banner4 from '../components/banner4.png';
+import banner1 from '/src/components/banner1.png';
+import banner2 from '/src/components/banner2.png';
+import banner3 from '/src/components/banner3.png';
+import banner4 from '/src/components/banner4.png';
 
 import './Carrusel.css'
 

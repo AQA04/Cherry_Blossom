@@ -1,15 +1,20 @@
 import React from "react";
 import './Menu.css'
 import logo from '../components/logo_negro_sinFondo.png'
-import iconoAcrilico from '../components/iconoAcrilico.png'
-import iconoDigital from '../components/iconoDigital.png'
-import iconoEstuche from '../components/iconoEstuche.png'
-import iconoLienzo from '../components/iconoLienzo.png'
-import iconoCarrito from '../components/iconoCarrito.png'
-import iconoPerfil from '../components/iconoPerfil.png'
+import iconoAcrilico from '/src/components/iconoAcrilico.png'
+import iconoDigital from '/src/components/iconoDigital.png'
+import iconoEstuche from '/src/components/iconoEstuche.png'
+import iconoLienzo from '/src/components/iconoLienzo.png'
+import iconoCarrito from '/src/components/iconoCarrito.png'
+import iconoPerfil from '/src/components/iconoPerfil.png'
 
 
 const Menu = () => {
+
+  const links = [
+    
+  ]
+
   return (
     <> 
     <div id="menuPrincipal">
