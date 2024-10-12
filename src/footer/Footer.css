@@ -3,10 +3,13 @@
     height: 100%;
     width: 100%;
 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
-
     
+    /*
+    background-color: #d6b0ed;
+    */
+
+    background-color: black;
 }
 
 .textoFooter {
@@ -16,8 +19,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.logoMenu{
-
+.logoFooter{
     width: 30%;
-    background-size: cover;
+    margin: 1%;
 }

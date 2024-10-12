@@ -1,23 +1,18 @@
 import React from 'react'
 import './Footer.css'
-import logo from '../components/logo_negro_sinFondo.png'
+//import logoFooter from '../components/logo_negro_sinFondo.png'
+import logoFooter from '../components/logo_negro.jpg'
 
 const Footer = () => {
     return (
       <> 
-      <footer>
-        <div id="padreFooter">          
-          <div>
-            <img src={logo} alt="logoMenu" class="logoMenu"></img>
+        <footer>
+          <div id='padreFooter'>
+            <img src={logoFooter} class="logoFooter"></img>
+          
+            <div>b</div>
           </div>
-          <div class="textoFooter">
-            <p>Necesitas ayuda?</p>
-            Whatsapp: +573123476859
-            <p>@_atsuko_lilith/</p>
-          </div>
-        </div>
-      </footer>
-
+        </footer>
       </>
     );
   };

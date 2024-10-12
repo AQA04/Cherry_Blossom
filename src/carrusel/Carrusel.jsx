@@ -20,7 +20,7 @@ const responsive = {
     items: 4,
   },
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 5000, min: 1024 },
     items: 3,
   },
 };
@@ -40,6 +40,7 @@ const Carrusel = () => {
       customTransition="transform 300ms ease-in-out"
       transitionDuration={300}
       containerClass="carousel-container"
+      slidesToSlide={1}
       dotListClass="custom-dot-list-style"
     >
       {imagen.map((imagen) => (
