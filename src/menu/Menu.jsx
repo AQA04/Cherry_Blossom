@@ -11,10 +11,6 @@ import iconoPerfil from '/src/components/iconoPerfil.png'
 
 const Menu = () => {
 
-  const links = [
-    
-  ]
-
   return (
     <> 
     <div id="menuPrincipal">
