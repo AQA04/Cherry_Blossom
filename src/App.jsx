@@ -1,7 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 /*-----Components-----*/
 import './App.css'
@@ -11,10 +8,15 @@ import AboutUs from './screens/Home/aboutUs/AboutUs';
 import Footer from './footer/Footer';
 import Productos from './screens/Home/products/Productos';
 
+
+import Info from './screens/info/Info';
+
 function App() {
+
 
   return (
     <>
+
       <div>
         <BrowserRouter>
           <Routes>
@@ -67,6 +69,21 @@ function App() {
         </BrowserRouter>
       </div>
 
+
+    {/* Rutas para iniciar las otras paginas*/}
+
+        
+    <div>
+    <BrowserRouter>
+      <Link to="/Info">Info</Link>
+      
+      <switch>
+        <Routes>
+          <Route path="/Info" element={<Info />} />
+        </Routes>
+        </switch>
+      </BrowserRouter>
+    </div>
 
     </>
   );
