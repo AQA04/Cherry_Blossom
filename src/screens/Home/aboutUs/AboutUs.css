@@ -35,3 +35,11 @@
     box-shadow: 1px 1px 1px ;
     border-radius: 2%;
 }
+
+.masInfoBoton {
+    height: 5%;
+    width: 30%;
+    background-color: rgb(72, 64, 118);
+    color: white;
+    border-radius: 3px;
+}
