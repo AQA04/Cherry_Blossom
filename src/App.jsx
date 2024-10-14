@@ -1,20 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 /*-----Components-----*/
 import './App.css'
 import Menu from './menu/Menu'
-import Carrusel from './carrusel/Carrusel'
-import AboutUs from './aboutUs/AboutUs';
+import Carrusel from './screens/Home/carrusel/Carrusel'
+import AboutUs from './screens/Home/aboutUs/AboutUs';
 import Footer from './footer/Footer';
-import Productos from './products/Productos';
+import Productos from './screens/Home/productos/Productos';
+
+import Info from './screens/info/Info';
 
 function App() {
 
+
   return (
     <>
+
       <div>
         <BrowserRouter>
           <Routes>
@@ -30,10 +32,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
-    
 
-      <div id='divisor'></div>
-      <div id='divisor'></div>
 
 
       <div>
@@ -45,8 +44,6 @@ function App() {
       </div>
 
 
-      <div id='divisor'></div>
-      <div id='divisor'></div>
 
       <div>
       <BrowserRouter>
@@ -56,8 +53,6 @@ function App() {
         </BrowserRouter>
       </div>
 
-      <div id='divisor'></div>
-      <div id='divisor'></div>
 
       <div>
       <BrowserRouter>
@@ -67,6 +62,17 @@ function App() {
         </BrowserRouter>
       </div>
 
+
+    {/* Rutas para iniciar las otras paginas*/}
+
+        
+    <div>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/Info" element={<Info />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
 
     </>
   );

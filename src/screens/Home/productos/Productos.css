@@ -37,6 +37,8 @@
 
     text-align: center;
 
+    margin: 10px;
+
 }
 
 .imagenesCartas{
@@ -51,6 +53,10 @@
     color: white;
     border-radius: 3px;
 
+}
+
+.botonCartas:hover {
+    cursor:pointer;
 }
 
 .descripcion {

@@ -27,7 +27,6 @@
 
 .linkMenu{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /*color: rgb(58, 48, 114);*/
     color: black;
     text-decoration: none;
     font-style: italic;
@@ -61,8 +60,3 @@
     margin-top: 2%;
     margin-right: 5%;
 }
-/*
-        <a href="./" class='linkMenu'>Estuche</a>
-        <a href="./" class='linkMenu'>Dibujo Digital</a>
-        <a href="./" class='linkMenu'>Lienzo</a>
-*/

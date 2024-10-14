@@ -1,27 +1,29 @@
 import React from "react";
+import { BrowserRouter,Link, Route, Routes } from "react-router-dom";
+
+//componentes
 import './Menu.css'
 import logo from '../components/logo_negro_sinFondo.png'
-import iconoAcrilico from '../components/iconoAcrilico.png'
-import iconoDigital from '../components/iconoDigital.png'
-import iconoEstuche from '../components/iconoEstuche.png'
-import iconoLienzo from '../components/iconoLienzo.png'
-import iconoCarrito from '../components/iconoCarrito.png'
-import iconoPerfil from '../components/iconoPerfil.png'
-
+import iconoAcrilico from '/src/components/iconoAcrilico.png'
+import iconoDigital from '/src/components/iconoDigital.png'
+import iconoEstuche from '/src/components/iconoEstuche.png'
+import iconoLienzo from '/src/components/iconoLienzo.png'
+import iconoCarrito from '/src/components/iconoCarrito.png'
+import iconoPerfil from '/src/components/iconoPerfil.png'
 
 const Menu = () => {
+
   return (
     <> 
     <div id="menuPrincipal">
         
         <img src={logo} alt="logoMenu" id="logoMenu"></img>
-
+        
         <div id="itemEicono">
         <img src={iconoAcrilico} class="iconosMenu"></img>
         <a href="./" class='linkMenu'>Acrilico</a>
         </div>
-        
-                
+
         <div id="itemEicono">
         <img src={iconoDigital} class="iconosMenu"></img>
         <a href="./" class='linkMenu'>Digital</a>
