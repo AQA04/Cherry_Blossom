@@ -3,7 +3,9 @@ import acrilicoo from '/src/components/acrilicoo.jpg';
 import digital from '/src/components/digital.jpg';
 import estuche from '/src/components/estuche.jpg';
 import lienzo from '/src/components/lienzo.jpg';
-import './info.css'
+import './Info.css'
+import Menu from '../../menu/Menu';
+import Footer from '../../footer/Footer';
 
 const productos = [
   { id: 1, imagen: acrilicoo, titulo: 'Pintura en acrílico', 
@@ -18,16 +20,27 @@ const productos = [
 
 const Info = () => {
   return (
-    <div className="productos">
-      {productos.map((producto) => (
-        <div key={producto.id} className="contenedor">
-          <img src={producto.imagen} alt={producto.titulo} className="imagen" />
-          <div className="contenido">
-            <h2 className="titulo">{producto.titulo}</h2>
-            <p className="texto">{producto.texto}</p>
+    <div>
+      <div>
+        <Menu/>
+      </div>
+
+      <div className="productos">
+        {productos.map((producto) => (
+          <div key={producto.id} className="contenedor">
+            <img src={producto.imagen} alt={producto.titulo} className="imagen" />
+            <div className="contenido">
+              <h2 className="titulo">{producto.titulo}</h2>
+              <p className="texto">{producto.texto}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+
+      <div>
+        <Footer/>
+      </div>
+
     </div>
   )
 }

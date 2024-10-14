@@ -7,6 +7,9 @@
   border-radius: 8px;
   margin: 5px;
   width: 98%; 
+  box-shadow: 0 0 5px #989797;
+  
+
   background-color: #e6fdff;
 }
 
