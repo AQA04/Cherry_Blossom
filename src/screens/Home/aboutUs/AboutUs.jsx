@@ -1,7 +1,6 @@
 import React from 'react'
-import '../aboutUs/aboutUs.css'
+import './aboutUs.css'
 import dueña from '/src/components/dueña.jpg';
-import Info from '../../info/Info';
 
 const AboutUs = () => {
   return (
