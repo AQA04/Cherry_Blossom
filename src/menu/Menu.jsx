@@ -21,12 +21,12 @@ const Menu = () => {
         
         <div id="itemEicono">
         <img src={iconoAcrilico} class="iconosMenu"></img>
-        <a href="./info" class='linkMenu'>Acrilico</a>
+        <a href="./" class='linkMenu'>Acrilico</a>
         </div>
 
         <div id="itemEicono">
         <img src={iconoDigital} class="iconosMenu"></img>
-        <a href="./info" class='linkMenu'>Digital</a>
+        <a href="./" class='linkMenu'>Digital</a>
         </div>
 
         <div id="itemEicono">

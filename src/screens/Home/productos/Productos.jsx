@@ -1,9 +1,13 @@
 import React from 'react'
+
 import './Productos.css'
 import estuche from '/src/components/estucheEjemplo.jpg'
 import lienzo from '/src/components/lienzoEjemplo.jpg'
 import acrilico from '/src/components/acrilicoEjemplo.jpg'
 import digital from '/src/components/digitalEjemplo.jpg'
+import { Link } from 'react-router-dom'
+
+import Info from '../../info/Info'
 
 
 export default function Productos() {
@@ -19,7 +23,7 @@ export default function Productos() {
                 <p>Estuches</p>
                 <p>Protege tu móvil con estilo, eligiendo un diseño exclusivo que refleje tu personalidad y gustos.</p>
               </div>
-              <button class='botonCartas'>¡Comprar!</button>
+              <button class='botonCartas' onClick={null}>Mas Info</button>
             </div>
 
             <div id='cartas'>
@@ -28,7 +32,7 @@ export default function Productos() {
                 <p>Lienzos</p>
                 <p>Crea obras únicas en lienzo, impresas con tus diseños o fotos favoritas para decorar cualquier espacio.</p>
               </div>
-              <button class='botonCartas'>¡Comprar!</button>
+              <button class='botonCartas' >¡Comprar!</button>
             </div>
 
             <div id='cartas'>

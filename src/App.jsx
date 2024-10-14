@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import {BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 /*-----Components-----*/
 import './App.css'
@@ -6,8 +7,7 @@ import Menu from './menu/Menu'
 import Carrusel from './screens/Home/carrusel/Carrusel'
 import AboutUs from './screens/Home/aboutUs/AboutUs';
 import Footer from './footer/Footer';
-import Productos from './screens/Home/products/Productos';
-
+import Productos from './screens/Home/productos/Productos';
 
 import Info from './screens/info/Info';
 
@@ -32,10 +32,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </div>
-    
 
-      <div id='divisor'></div>
-      <div id='divisor'></div>
 
 
       <div>
@@ -47,8 +44,6 @@ function App() {
       </div>
 
 
-      <div id='divisor'></div>
-      <div id='divisor'></div>
 
       <div>
       <BrowserRouter>
@@ -58,8 +53,6 @@ function App() {
         </BrowserRouter>
       </div>
 
-      <div id='divisor'></div>
-      <div id='divisor'></div>
 
       <div>
       <BrowserRouter>
@@ -75,13 +68,9 @@ function App() {
         
     <div>
     <BrowserRouter>
-      <Link to="/Info">Info</Link>
-      
-      <switch>
         <Routes>
           <Route path="/Info" element={<Info />} />
         </Routes>
-        </switch>
       </BrowserRouter>
     </div>
 

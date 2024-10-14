@@ -55,6 +55,10 @@
 
 }
 
+.botonCartas:hover {
+    cursor:pointer;
+}
+
 .descripcion {
     height: 28%;
     width: 100%;
