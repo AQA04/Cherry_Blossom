@@ -8,7 +8,6 @@ const Footer = () => {
       <> 
         <footer>
           <div id='padreFooter'>
-            <img src={logoFooter} class="logoFooter"></img>
           
             <div>b</div>
           </div>
