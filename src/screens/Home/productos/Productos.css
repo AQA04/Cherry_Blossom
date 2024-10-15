@@ -37,6 +37,8 @@
 
     text-align: center;
 
+    margin: 10px;
+
 }
 
 .imagenesCartas{
@@ -47,10 +49,14 @@
 .botonCartas{
     height: 5%;
     width: 30%;
-    background-color: rgb(72, 64, 118);
+    background-color: rgb(81, 72, 138);
     color: white;
     border-radius: 3px;
 
+}
+
+.botonCartas:hover {
+    cursor:pointer;
 }
 
 .descripcion {
