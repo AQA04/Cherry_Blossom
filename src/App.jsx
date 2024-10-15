@@ -54,6 +54,7 @@ function App() {
       </div>
 
 
+
       <div>
       <BrowserRouter>
           <Routes>
@@ -66,6 +67,7 @@ function App() {
     {/* Rutas para iniciar las otras paginas*/}
 
         
+
     <div>
     <BrowserRouter>
         <Routes>
