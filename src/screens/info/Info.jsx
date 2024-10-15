@@ -4,6 +4,7 @@ import digital from '/src/components/digital.jpg';
 import estuche from '/src/components/estuche.jpg';
 import lienzo from '/src/components/lienzo.jpg';
 import './Info.css'
+
 import Menu from '../../menu/Menu';
 import Footer from '../../footer/Footer';
 

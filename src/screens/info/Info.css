@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'title'; 
+  src: url('/src/components/fonts/title.TTF'); 
+}
+
+@font-face {
+  font-family: 'text'; 
+  src: url('/src/components/fonts/text.TTF'); 
+}
+
 .contenedor {
   display: flex;
   flex-direction: row-reverse;
@@ -8,30 +18,35 @@
   margin: 5px;
   width: 98%; 
   box-shadow: 0 0 5px #989797;
-  
-
-  background-color: #e6fdff;
+  background-color: #fae0fe;
 }
 
 .imagen {
-  width: 250px;
-  height: auto;
+  width: 300px;
+  height: 350px;
   border-radius: 4px;
-  margin-left: auto; 
 }
 
 .contenido {
   flex: 5;
-  padding-right: 20%; 
+  padding-right: 10%; 
+  align-content: center;
+  justify-content: center;
 }
 
 .titulo {
-  font-size: 28px;
+  width: 100%;
+  font-size: 240%;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-family: title, sans-serif;
 }
 
 .texto {
-  font-size: 23px;
+  width: 100%;
+  font-size: 140%;
   color: #000000;
+  text-align: center;
+  font-family: text, sans-serif;
 }
