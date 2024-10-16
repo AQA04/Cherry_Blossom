@@ -7,25 +7,12 @@ const galeria = () => {
     <div>
         <div className='tituloGaleria'>Mi Coleccion</div>
         
-        <div class="row">
-        <div class="column">
+        <div class="galeria">
             <div className='imgGaleria'>imagen1</div>
             <div className='imgGaleria'>imagen1</div>
             <div className='imgGaleria'>imagen1</div>
-        </div>
-        <div class="column">
             <div className='imgGaleria'>imagen1</div>
             <div className='imgGaleria'>imagen1</div>
-            <div className='imgGaleria'>imagen1</div>
-        </div>
-        <div class="column">
-            <div className='imgGaleria'>imagen1</div>
-            <div className='imgGaleria'>imagen1</div>
-            <div className='imgGaleria'>imagen1</div>
-        </div>
-        <div class="column">
-            <div className='imgGaleria'>imagen1</div>
-        </div>
         </div>
 
     </div>
