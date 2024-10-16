@@ -11,6 +11,7 @@ import Productos from './screens/Home/productos/Productos';
 import Galeria from './screens/Home/galeria/galeria'
 
 import Info from './screens/info/Info';
+import Login from './screens/login/Login';
 
 function App() {
 
@@ -70,7 +71,6 @@ function App() {
         </BrowserRouter>
       </div>
 
-
     {/* Rutas para iniciar las otras paginas*/}
 
         
@@ -82,6 +82,14 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+
+    <div>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/Login" element={<Login />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
 
     </>
   );
