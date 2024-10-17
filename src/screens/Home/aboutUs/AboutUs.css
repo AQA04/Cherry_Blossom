@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'title'; 
+    src: url('/src/components/fonts/title.TTF');
+}
+  
+  @font-face {
+    font-family: 'text'; 
+    src: url('/src/components/fonts/text.TTF');
+  }
+
 #aboutUs {
     height: 300px;
     width: 98%;
@@ -11,7 +21,7 @@
 
     font-size: 100%;
     border-radius: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: text, serif;
     color: rgb(72, 64, 118);
     background-color: #f3d9ff;
 }
@@ -23,6 +33,7 @@
 
     justify-content: center;
     align-content: center;
+    text-align: center;
     margin-left: 1%;
     margin-right: 1%;
 
@@ -36,10 +47,18 @@
     border-radius: 2%;
 }
 
-.masInfoBoton {
-    height: 5%;
-    width: 30%;
-    background-color: rgb(72, 64, 118);
-    color: white;
-    border-radius: 3px;
+.instagramDir{
+    display: flex;
+}
+
+.iconoIg {
+    height: 2%;
+    width: 2%;
+
+    text-decoration: none;
+    font-size: medium;
+    justify-content: center;
+    align-content: center;
+
+    color: black;
 }
