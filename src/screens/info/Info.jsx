@@ -9,14 +9,54 @@ import Menu from '../../menu/Menu';
 import Footer from '../../footer/Footer';
 
 const productos = [
-  { id: 1, imagen: acrilicoo, titulo: 'Pintura en acrílico', 
-    texto: 'Encuentra el tamaño que mejor se adapte a tu espacio. Los diseños son totalmente personalizados. Sencillo: Elegante y minimalista Blanco y Negro: Clásico y sofisticado Detalle Completo: Riqueza de detalles y matices. Nota: Cada opción de diseño tiene un costo diferente.' },
-  { id: 2, imagen: digital, titulo: 'Dibujo digital',
-    texto: 'Todos los dibujos se entregan en formato JPG y con el mismo tamaño. Podras seleccionar el estilo que más te guste como: sombra, lineart, blanco y negro, detallado y realismo. Nota: Cada opción de diseño tiene un costo diferente.' },
-  { id: 3, imagen: estuche, titulo: 'Estuche', 
-    texto: 'Tenemos varios modelos diferentes que se pueden adaptar a lo que buscas. Podras escoger el diseño que más que te guste, tenemos pinturas sencillas, blanco y negro, lineart o detalladas, podras personalizazrlo como gustes. Nota: Cada opción de diseño tiene un costo diferente.'},
-  { id: 4, imagen: lienzo, titulo: 'Lienzo',
-    texto: 'Tenemos diferentes tamaños para que te puedas adaptar al que más te gusta. Los diseños varian según lo que buscas; sencillo, blanco y negro, lineart, detallado. Puedes seleccionar el estilo que más te guste. Nota: Cada opción de diseño tiene un costo diferente.' },
+  {
+    id: 1,
+    imagen: acrilicoo,
+    titulo: 'Pintura en acrílico',
+    texto: <div>
+      <p>Encuentra el tamaño que mejor se adapte a tu espacio.</p>
+      <p>Los diseños son totalmente personalizados.</p>
+      <p>Sencillo: Elegante y minimalista</p>
+      <p>Blanco y Negro: Clásico y sofisticado</p>
+      <p>Detalle Completo: Riqueza de detalles y matices.</p>
+      <p>Nota: Cada opción de diseño tiene un costo diferente.</p>
+    </div>
+  },
+
+ {
+  id: 2,
+  imagen: digital,
+  titulo: 'Dibujo digital',
+  texto: <div>
+  <p>Todos los dibujos se entregan en formato JPG y con el mismo tamaño.</p>
+  <p>Podrás seleccionar el estilo que más te guste como: </p>
+  <p>sombra, lineart, blanco y negro, detallado y realismo.</p>
+  <p>Nota: Cada opción de diseño tiene un costo diferente.</p>
+  </div>
+},
+{
+  id: 3,
+  imagen: estuche,
+  titulo: 'Estuche',
+  texto: <div>
+    <p>Tenemos varios modelos diferentes que se pueden adaptar a lo que buscas.</p>
+    <p>Podrás escoger el diseño que más te guste, tenemos pinturas sencillas, blanco y negro, lineart o detalladas</p>
+    <p>podrás personalizarlo como gustes.</p>
+    <p>Nota: Cada opción de diseño tiene un costo diferente.</p>
+  </div>
+},
+{
+  id: 4,
+  imagen: lienzo,
+  titulo: 'Lienzo',
+  texto: 
+  <div>
+    <p>Tenemos diferentes tamaños para que te puedas adaptar al que más te gusta.</p>
+    <p>Los diseños varian según lo que buscas; sencillo, blanco y negro, lineart, detallado.</p>
+    <p>Puedes seleccionar el estilo que más te guste.</p>
+    <p>Nota: Cada opción de diseño tiene un costo diferente.</p>
+    </div>
+},
 ];
 
 const Info = () => {
