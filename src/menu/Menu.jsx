@@ -10,6 +10,7 @@ import iconoEstuche from '/src/components/iconoEstuche.png'
 import iconoLienzo from '/src/components/iconoLienzo.png'
 import iconoCarrito from '/src/components/iconoCarrito.png'
 import iconoPerfil from '/src/components/iconoPerfil.png'
+import Info from "../screens/info/Info";
 
 const Menu = () => {
 

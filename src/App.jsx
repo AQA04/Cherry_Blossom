@@ -8,8 +8,10 @@ import Carrusel from './screens/Home/carrusel/Carrusel'
 import AboutUs from './screens/Home/aboutUs/AboutUs';
 import Footer from './footer/Footer';
 import Productos from './screens/Home/productos/Productos';
+import Galeria from './screens/Home/galeria/galeria'
 
 import Info from './screens/info/Info';
+import Login from './screens/login/Login';
 
 function App() {
 
@@ -53,6 +55,13 @@ function App() {
         </BrowserRouter>
       </div>
 
+      <div>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Galeria />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
 
       <div>
       <BrowserRouter>
@@ -62,10 +71,10 @@ function App() {
         </BrowserRouter>
       </div>
 
-
     {/* Rutas para iniciar las otras paginas*/}
 
         
+
     <div>
     <BrowserRouter>
         <Routes>
@@ -73,6 +82,14 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+
+    <div>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/Login" element={<Login />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
 
     </>
   );
