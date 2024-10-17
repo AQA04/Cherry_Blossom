@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'title'; 
+    src: url('/src/components/fonts/title.TTF');
+}
+  
+  @font-face {
+    font-family: 'text'; 
+    src: url('/src/components/fonts/text.TTF');
+  }
+
 #aboutUs {
     height: 300px;
     width: 98%;
@@ -11,7 +21,7 @@
 
     font-size: 100%;
     border-radius: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: text, serif;
     color: rgb(72, 64, 118);
     background-color: #f3d9ff;
 }
