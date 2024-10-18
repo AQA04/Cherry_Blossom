@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter,Link, Route, Routes } from "react-router-dom";
 
 //componentes
 import './Menu.css'
@@ -13,30 +12,40 @@ import iconoPerfil from '/src/components/iconoPerfil.png'
 
 const Menu = () => {
 
+  const clickLogo = () => {
+    window.location.href = './';
+  };
+
+  const clickPerfil = () => {
+    window.location.href = './login';
+  };
+
+
+
   return (
     <> 
     <div id="menuPrincipal">
         
-        <img src={logo} alt="logoMenu" id="logoMenu"></img>
+        <img src={logo} onClick={clickLogo} style={{cursor:"pointer"}} alt="logoMenu" id="logoMenu"></img>
         
         <div id="itemEicono">
         <img src={iconoAcrilico} class="iconosMenu"></img>
-        <a href="./" class='linkMenu'>Acrilico</a>
+        <a href="" class='linkMenu'>Acrilico</a>
         </div>
 
         <div id="itemEicono">
         <img src={iconoDigital} class="iconosMenu"></img>
-        <a href="./" class='linkMenu'>Digital</a>
+        <a href="" class='linkMenu'>Digital</a>
         </div>
 
         <div id="itemEicono">
         <img src={iconoEstuche} class="iconosMenu"></img>
-        <a href="./" class='linkMenu'>Estuche</a>
+        <a href="" class='linkMenu'>Estuche</a>
         </div>
 
         <div id="itemEicono">
         <img src={iconoLienzo} class="iconosMenu"></img>
-        <a href="./" class='linkMenu'>Lienzo</a>
+        <a href="" class='linkMenu'>Lienzo</a>
         </div>
 
         <div>
@@ -44,7 +53,7 @@ const Menu = () => {
         </div>
 
         <div>
-        <img src={iconoPerfil} class="iconosGrandes"></img>
+        <img src={iconoPerfil} onClick={clickPerfil} style={{cursor:"pointer"}} class="iconosGrandes"></img>
         </div>
 
     </div>
