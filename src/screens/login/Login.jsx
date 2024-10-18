@@ -1,11 +1,15 @@
 import React from 'react'
 
 import '../login/Login.css'
-
+import iconoPerfil from '/src/Components/iconoPerfil.jpg'
 
 const Login = () => {
   
-  const handleButtonClick = () => {
+  const handleButtonIngresar = () => {
+    window.location.href = './';
+  };
+
+  const handleButtonCancelar = () => {
     window.location.href = './';
   };
   
@@ -14,6 +18,8 @@ const Login = () => {
     <div id='superpadre'>
         <div id='box_login'>
 
+          <img src={iconoPerfil} class="iconoPerfil"></img>
+
           <div class='titulo'>
             Login
           </div>
@@ -21,7 +27,10 @@ const Login = () => {
           <input type='text' id='username' placeholder='Usuario' class='inputs'></input>
           <input type='text' id='password' placeholder='Contraseña' class='inputs'></input>
           
-          <button onClick={handleButtonClick} class='ingresar'>Ingresar</button>
+          <button onClick={handleButtonCancelar} class='cancelar'>Cancelar</button>
+          <button onClick={handleButtonIngresar} class='ingresar'>Ingresar</button>
+            
+
         </div>
     </div>
     </>

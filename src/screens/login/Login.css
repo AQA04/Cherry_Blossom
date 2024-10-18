@@ -9,22 +9,30 @@
     text-align: center;
 
     justify-content: space-between;
+
+    background-image: url('/src/components/fondoLogin.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 
 #box_login {
     
     width: 30%;
-    height: 400px;
+    height: 450px;
     
     background-color: #d7dff4;
     color: black;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
     border-radius: 50px;
+    padding: 1%;
 
-    justify-content: center;
-    align-content: center;
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .titulo {
@@ -40,11 +48,10 @@
     height: 10%;
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 120%;
 
     border-color: cyan;
     border-radius: 20px;
-
-    margin-bottom: 1%;
 
     justify-content: center; 
     align-items: center; 
@@ -54,9 +61,13 @@
 .ingresar {
     height: 10%;
     width: 30%;
+
     background-color: #f0f0f0;
     color: black;
     border-radius: 5px;
+    
+    margin: 10%;
+
     justify-content: center; 
     align-items: center; 
     text-align: center;
@@ -66,6 +77,41 @@
 .ingresar:hover {
     background-color: rgb(81, 72, 138);
     color: white;
-    transition: 0.5s;
+    transition: 1s;
     cursor: pointer;
+}
+
+.cancelar {
+    height: 10%;
+    width: 30%;
+
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 5px;
+    
+    margin: 10%;
+
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    border: none;
+}
+
+.cancelar:hover {
+    background-color: rgb(141, 36, 36);
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.iconoPerfil {
+    height: 30%;
+    width: 30%;
+
+    border-radius: 100%;
+    border-color: black;
+
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
 }
