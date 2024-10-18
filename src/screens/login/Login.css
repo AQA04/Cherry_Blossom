@@ -1,0 +1,71 @@
+#superpadre {
+    height: 600px;
+    width: 100%;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    justify-content: space-between;
+}
+
+#box_login {
+    
+    width: 30%;
+    height: 400px;
+    
+    background-color: #d7dff4;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    border-radius: 50px;
+
+    justify-content: center;
+    align-content: center;
+
+}
+
+.titulo {
+    height: 10%;
+    width: 100%;
+
+    font-size: 200%;
+
+}
+
+.inputs {
+    width: 90%;
+    height: 10%;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    border-color: cyan;
+    border-radius: 20px;
+
+    margin-bottom: 1%;
+
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+
+.ingresar {
+    height: 10%;
+    width: 30%;
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 5px;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    border: none;
+}
+
+.ingresar:hover {
+    background-color: rgb(81, 72, 138);
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
