@@ -13,7 +13,7 @@ const galeria = () => {
   return (
     <>
     <div>
-        <div className='tituloGaleria'>Mi Coleccion</div>
+        <div className='tituloGaleria'>Mi Colección</div>
         
         <div class="galeria">
             <img src={img1} className='imgGaleria img-grande'></img>
