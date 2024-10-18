@@ -12,6 +12,7 @@ import Galeria from './screens/Home/galeria/galeria'
 
 import Info from './screens/info/Info';
 import Login from './screens/login/Login';
+import Consultas from './screens/consultas/Consultas';
 import Carrito from './screens/carrito/Carrito';
 
 function App() {
@@ -95,6 +96,12 @@ function App() {
       <div>
       <BrowserRouter>
           <Routes>
+              <Route path="/consultas" element={<Consultas />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+
+         <div>
             <Route path="/Carrito" element={<Carrito />} />
           </Routes>
         </BrowserRouter>

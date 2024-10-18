@@ -1,0 +1,30 @@
+#padresote {
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos se alineen en fila */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
+}
+
+#cartas {
+    height: auto; /* Cambia a auto para que se ajuste al contenido */
+    width: 30%; /* Ajusta el ancho según sea necesario */
+    font-family: text, serif;
+    color: black;
+    border-color: black;
+    box-shadow: 0 0 10px #989797;
+    border-radius: 4px;
+    text-align: center;
+    margin: 10px;
+}
+
+.imagenesCartas {
+    height: 100px; /* Ajusta la altura según sea necesario */
+    width: auto; /* Mantiene la proporción de la imagen */
+}
+
+.botonCartas {
+    height: 40px; /* Ajusta la altura del botón */
+    width: 100%; /* Hace que el botón ocupe todo el ancho del contenedor */
+    background-color: rgb(81, 72, 138);
+    color: white;
+    border-radius: 3px;
+}
