@@ -12,6 +12,7 @@ import Galeria from './screens/Home/galeria/galeria'
 
 import Info from './screens/info/Info';
 import Login from './screens/login/Login';
+import Consultas from './screens/consultas/Consultas';
 
 function App() {
 
@@ -87,6 +88,14 @@ function App() {
       <BrowserRouter>
           <Routes>
             <Route path="/Login" element={<Login />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+
+      <div>
+      <BrowserRouter>
+          <Routes>
+            <Route path="/consultas" element={<Consultas />} />
           </Routes>
         </BrowserRouter>
       </div>

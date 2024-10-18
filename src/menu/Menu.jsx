@@ -10,6 +10,8 @@ import iconoLienzo from '/src/components/iconoLienzo.png'
 import iconoCarrito from '/src/components/iconoCarrito.png'
 import iconoPerfil from '/src/components/iconoPerfil.png'
 
+
+
 const Menu = () => {
 
   const clickLogo = () => {
@@ -19,6 +21,9 @@ const Menu = () => {
   const clickPerfil = () => {
     window.location.href = './login';
   };
+
+  
+
 
 
 
