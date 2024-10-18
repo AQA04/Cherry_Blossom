@@ -26,7 +26,7 @@ export default function Productos() {
                 <p>Estuches</p>
                 <p>Protege tu móvil con estilo, eligiendo un diseño exclusivo que refleje tu personalidad y gustos.</p>
               </div>
-              <button class='botonCartas' onClick={handleButtonClick}>Mas Info</button>
+              <button class='botonCartas' onClick={handleButtonClick}>Más Info</button>
             </div>
 
             <div id='cartas'>
@@ -35,7 +35,7 @@ export default function Productos() {
                 <p>Lienzos</p>
                 <p>Crea obras únicas en lienzo, impresas con tus diseños o fotos favoritas para decorar cualquier espacio.</p>
               </div>
-              <button class='botonCartas' onClick={handleButtonClick}>Mas Info</button>
+              <button class='botonCartas' onClick={handleButtonClick}>Más Info</button>
             </div>
 
             <div id='cartas'>
@@ -44,7 +44,7 @@ export default function Productos() {
                 <p>Acrilico</p>
                 <p>Exhibe tus recuerdos en placas de acrílico de alta calidad, con impresión vibrante que resalta cualquier foto o diseño.</p>
               </div>
-              <button class='botonCartas'onClick={handleButtonClick}>Mas Info</button>
+              <button class='botonCartas'onClick={handleButtonClick}>Más Info</button>
               </div>
 
             <div id='cartas'>
@@ -53,7 +53,7 @@ export default function Productos() {
                 <p>Digital</p>
                 <p>Obtén ilustraciones digitales personalizadas, hechas a medida según tus ideas o fotos, perfectas para regalos únicos</p>
               </div>
-              <button class='botonCartas'onClick={handleButtonClick}>Mas Info</button>
+              <button class='botonCartas'onClick={handleButtonClick}>Más Info</button>
 
             </div>
 
