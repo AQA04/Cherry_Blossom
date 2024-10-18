@@ -9,7 +9,6 @@
   }
 
 #padreFooter {
-
     height: 90%;
     width: 98%;
 
@@ -27,16 +26,18 @@
     font-size: 80%;
     font-family:text, serif;
     
-    
 }
+
 .linkFooter {
     text-decoration: none;
     color: black;
+    font-family:text, serif;
 }
 
 .tituloFooter {
     font-size: 150%;
     font-weight: bold;
+    font-family:title, serif;
 }
 
 .logoFooter{
