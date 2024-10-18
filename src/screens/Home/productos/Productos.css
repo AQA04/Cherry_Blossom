@@ -67,9 +67,17 @@
 
 .botonCartas:hover {
     cursor:pointer;
+    
+
+    background-color: rgb(173, 170, 198);
+    border-color: black;
+    color: black;
+    transition: 1s;
 }
 
 .descripcion {
     height: 28%;
     width: 100%;
+
+    font-size: 95%;
 }
