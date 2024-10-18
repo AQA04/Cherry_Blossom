@@ -12,6 +12,7 @@ import iconoPerfil from '/src/components/iconoPerfil.png'
 
 
 
+
 const Menu = () => {
 
   const clickLogo = () => {
@@ -35,22 +36,22 @@ const Menu = () => {
         
         <div id="itemEicono">
         <img src={iconoAcrilico} class="iconosMenu"></img>
-        <a href="" class='linkMenu'>Acrilico</a>
+        <a href="./consultas" class='linkMenu'>Acrilico</a>
         </div>
 
         <div id="itemEicono">
         <img src={iconoDigital} class="iconosMenu"></img>
-        <a href="" class='linkMenu'>Digital</a>
+        <a href="./consultas" class='linkMenu'>Digital</a>
         </div>
 
         <div id="itemEicono">
         <img src={iconoEstuche} class="iconosMenu"></img>
-        <a href="" class='linkMenu'>Estuche</a>
+        <a href="./consultas" class='linkMenu'>Estuche</a>
         </div>
 
         <div id="itemEicono">
         <img src={iconoLienzo} class="iconosMenu"></img>
-        <a href="" class='linkMenu'>Lienzo</a>
+        <a href="./consultas" class='linkMenu'>Lienzo</a>
         </div>
 
         <div>
