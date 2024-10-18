@@ -20,6 +20,10 @@ const Menu = () => {
     window.location.href = './login';
   };
 
+  const clickCarrito = () => {
+    window.location.href = './Carrito';
+  };
+
 
 
   return (
@@ -49,7 +53,7 @@ const Menu = () => {
         </div>
 
         <div>
-        <img src={iconoCarrito} class="iconosGrandes"></img>
+        <img src={iconoCarrito}onClick={clickCarrito} style={{cursor:"pointer"}} class="iconosGrandes"></img>
         </div>
 
         <div>
