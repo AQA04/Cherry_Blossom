@@ -25,7 +25,7 @@ const Login = () => {
           </div>
 
           <input type='text' id='username' placeholder='Usuario' class='inputs'></input>
-          <input type='text' id='password' placeholder='Contraseña' class='inputs'></input>
+          <input type="password" id='password' placeholder='Contraseña' class='inputs'></input>
           
           <button onClick={handleButtonCancelar} class='cancelar'>Cancelar</button>
           <button onClick={handleButtonIngresar} class='ingresar'>Ingresar</button>
