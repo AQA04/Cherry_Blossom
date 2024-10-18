@@ -101,11 +101,15 @@ function App() {
         </BrowserRouter>
       </div>
 
-         <div>
-            <Route path="/Carrito" element={<Carrito />} />
+
+      <div>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/carrito" element={<Carrito />} />
           </Routes>
         </BrowserRouter>
       </div>
+    
     </>
   );
 }
