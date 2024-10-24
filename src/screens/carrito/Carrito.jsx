@@ -22,7 +22,7 @@ const Carrito = () => {
     return (
     <>
         <Menu/>
-      <div className="carrito">
+      <div classNameName="carrito">
         <h2>Carrito de Compras</h2>
         <ul>
           {productos.map((producto) => (

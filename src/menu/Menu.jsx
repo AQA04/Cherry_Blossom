@@ -35,31 +35,31 @@ const Menu = () => {
         <img src={logo} onClick={clickLogo} style={{cursor:"pointer"}} alt="logoMenu" id="logoMenu"></img>
         
         <div id="itemEicono">
-        <img src={iconoAcrilico} class="iconosMenu"></img>
-        <a href="./consultas" class='linkMenu'>Acrilico</a>
+        <img src={iconoAcrilico} className="iconosMenu"></img>
+        <a href="./consultas" className='linkMenu'>Acrilico</a>
         </div>
 
         <div id="itemEicono">
-        <img src={iconoDigital} class="iconosMenu"></img>
-        <a href="./consultas" class='linkMenu'>Digital</a>
+        <img src={iconoDigital} className="iconosMenu"></img>
+        <a href="./consultas" className='linkMenu'>Digital</a>
         </div>
 
         <div id="itemEicono">
-        <img src={iconoEstuche} class="iconosMenu"></img>
-        <a href="./consultas" class='linkMenu'>Estuche</a>
+        <img src={iconoEstuche} className="iconosMenu"></img>
+        <a href="./consultas" className='linkMenu'>Estuche</a>
         </div>
 
         <div id="itemEicono">
-        <img src={iconoLienzo} class="iconosMenu"></img>
-        <a href="./consultas" class='linkMenu'>Lienzo</a>
+        <img src={iconoLienzo} className="iconosMenu"></img>
+        <a href="./consultas" className='linkMenu'>Lienzo</a>
         </div>
 
         <div>
-        <img src={iconoCarrito}onClick={clickCarrito} style={{cursor:"pointer"}} class="iconosGrandes"></img>
+        <img src={iconoCarrito}onClick={clickCarrito} style={{cursor:"pointer"}} className="iconosGrandes"></img>
         </div>
 
         <div>
-        <img src={iconoPerfil} onClick={clickPerfil} style={{cursor:"pointer"}} class="iconosGrandes"></img>
+        <img src={iconoPerfil} onClick={clickPerfil} style={{cursor:"pointer"}} className="iconosGrandes"></img>
         </div>
 
     </div>

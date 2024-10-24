@@ -18,17 +18,17 @@ const Login = () => {
     <div id='superpadre'>
         <div id='box_login'>
 
-          <img src={iconoPerfil} class="iconoPerfil"></img>
+          <img src={iconoPerfil} className="iconoPerfil"></img>
 
-          <div class='titulo'>
+          <div className='titulo'>
             Login
           </div>
 
-          <input type='text' id='username' placeholder='Usuario' class='inputs'></input>
-          <input type="password" id='password' placeholder='Contraseña' class='inputs'></input>
+          <input type='text' id='username' placeholder='Usuario' className='inputs'></input>
+          <input type="password" id='password' placeholder='Contraseña' className='inputs'></input>
           
-          <button onClick={handleButtonCancelar} class='cancelar'>Cancelar</button>
-          <button onClick={handleButtonIngresar} class='ingresar'>Ingresar</button>
+          <button onClick={handleButtonCancelar} className='cancelar'>Cancelar</button>
+          <button onClick={handleButtonIngresar} className='ingresar'>Ingresar</button>
             
 
         </div>
