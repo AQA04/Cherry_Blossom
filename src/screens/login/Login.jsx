@@ -1,5 +1,4 @@
 import React from 'react'
-
 import '../login/Login.css'
 import iconoPerfil from '/src/Components/iconoPerfil.jpg'
 
@@ -26,6 +25,10 @@ const Login = () => {
 
           <input type='text' id='username' placeholder='Usuario' className='inputs'></input>
           <input type="password" id='password' placeholder='Contraseña' className='inputs'></input>
+
+          <div className='linkRegistro'>
+            <a href="./Registro">No tienes cuenta?</a>
+          </div>
           
           <button onClick={handleButtonCancelar} className='cancelar'>Cancelar</button>
           <button onClick={handleButtonIngresar} className='ingresar'>Ingresar</button>

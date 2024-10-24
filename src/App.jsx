@@ -14,6 +14,7 @@ import Info from './screens/info/Info';
 import Login from './screens/login/Login';
 import Consultas from './screens/consultas/Consultas';
 import Carrito from './screens/carrito/Carrito';
+import Registro from './screens/registro/Registro'
 
 function App() {
 
@@ -106,6 +107,14 @@ function App() {
       <BrowserRouter>
           <Routes>
               <Route path="/carrito" element={<Carrito />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+
+      <div>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/registro" element={<Registro />} />
           </Routes>
         </BrowserRouter>
       </div>
