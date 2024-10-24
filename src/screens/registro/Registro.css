@@ -1,5 +1,5 @@
-#superpadre {
-    height: 600px;
+#superpadreReg {
+    height: 5500px;
     width: 100%;
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -17,10 +17,10 @@
 }
 
 
-#box_login {
+#box_Reg {
     
     width: 30%;
-    height: 450px;
+    height: 570px;
     
     background-color: #d7dff4;
     color: black;
@@ -35,7 +35,7 @@
     transform: translate(-50%, -50%);
 }
 
-.titulo {
+.tituloReg {
     height: 10%;
     width: 100%;
 
@@ -43,69 +43,25 @@
 
 }
 
-.inputs {
+.inputsReg {
     width: 90%;
-    height: 10%;
+    height: 15%;
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 120%;
 
     border-color: cyan;
     border-radius: 20px;
-
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-}
-
-.ingresar {
-    height: 10%;
-    width: 30%;
-
-    background-color: #f0f0f0;
-    color: black;
-    border-radius: 5px;
+    margin-bottom: 4%;
     
-    margin: 10%;
-
     justify-content: center; 
     align-items: center; 
     text-align: center;
-    border: none;
+
 }
 
-.ingresar:hover {
-    background-color: rgb(81, 72, 138);
-    color: white;
-    transition: 1s;
-    cursor: pointer;
-}
-
-.cancelar {
-    height: 10%;
-    width: 30%;
-
-    background-color: #f0f0f0;
-    color: black;
-    border-radius: 5px;
-    
-    margin: 10%;
-
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    border: none;
-}
-
-.cancelar:hover {
-    background-color: rgb(141, 36, 36);
-    color: white;
-    transition: 1s;
-    cursor: pointer;
-}
-
-.iconoPerfil {
-    height: 30%;
+.iconoRegistro {
+    height: 20%;
     width: 30%;
 
     border-radius: 100%;
@@ -115,9 +71,52 @@
     align-items: center; 
     text-align: center;
 }
-.linkRegistro {
 
-    text-align: center;
-    size: 100%;
+
+.registrarReg {
+    height: 10%;
+    width: 30%;
+
+    background-color: #f0f0f0;
     color: black;
+    border-radius: 5px;
+    
+    margin: 10%;
+
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    border: none;
 }
+
+.registrarReg:hover {
+    background-color: rgb(81, 72, 138);
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.cancelarReg {
+    height: 10%;
+    width: 30%;
+
+    background-color: #f0f0f0;
+    color: black;
+    border-radius: 5px;
+    
+    margin: 10%;
+
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    border: none;
+
+}
+
+.cancelarReg:hover {
+    background-color: rgb(141, 36, 36);
+    color: white;
+    transition: 1s;
+    cursor: pointer;
+}
+
