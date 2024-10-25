@@ -16,7 +16,7 @@ const AboutUs = () => {
         <p>Hola, Soy Lilith, artista detras de Cherry Blossom</p>      
         <p>Soy un artista apasionado por la exploración de emociones y conceptos a través de mi arte. Mi trabajo fusiona acrílicos, estuches, lienzos y dibujos digitales con un enfoque más caricatura, chibi, anime y dark , buscando dar una satisfacción personalizada. Cada pieza es una invitación a un diálogo visual y emocional único.</p>
         
-        <div classNameName='a'>
+        <div className='a'>
           <img src={iconoIg} href={instagramId} className='iconoIg'></img>
           <a href={instagramId} className='aboutUs_texto'>Mi instagram</a>
         </div>

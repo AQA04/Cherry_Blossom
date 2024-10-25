@@ -66,13 +66,13 @@ const Info = () => {
         <Menu/>
       </div>
 
-      <div classNameName="productos">
+      <div class="productos">
         {productos.map((producto) => (
-          <div key={producto.id} classNameName="contenedor">
-            <img src={producto.imagen} alt={producto.titulo} classNameName="imagen" />
-            <div classNameName="contenido">
-              <h2 classNameName="titulo">{producto.titulo}</h2>
-              <p classNameName="texto">{producto.texto}</p>
+          <div key={producto.id} className="contenedor">
+            <img src={producto.imagen} alt={producto.titulo} className="imagen" />
+            <div className="contenido">
+              <h2 className="titulo">{producto.titulo}</h2>
+              <p className="texto">{producto.texto}</p>
             </div>
           </div>
         ))}
