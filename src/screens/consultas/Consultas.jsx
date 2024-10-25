@@ -18,39 +18,39 @@ const Consultas = () => {
 
         <div id="expoConsultas">
             <div id='cartasConsultas'>
-              <img src={lienzo} alt='estucheEjemplo' class='imagenesConsultas'></img>
-              <div class='descripcionConsultas'>
+              <img src={lienzo} alt='estucheEjemplo' className='imagenesConsultas'></img>
+              <div className='descripcionConsultas'>
                 <p>Lienzo</p>
                 <p>20x30</p>
               </div>
-              <button class='botonConsultas' onClick={handleButtonClick}>Comprar</button>
+              <button className='botonConsultas' onClick={handleButtonClick}>Comprar</button>
             </div>
 
             <div id='cartasConsultas'>
-              <img src={lienzo} alt='lienzoEjemplo' class='imagenesConsultas'></img>
-              <div class='descripcionConsultas'>
+              <img src={lienzo} alt='lienzoEjemplo' className='imagenesConsultas'></img>
+              <div className='descripcionConsultas'>
                 <p>Lienzos</p>
                 <p>30x45</p>
               </div>
-              <button class='botonConsultas' onClick={handleButtonClick}>Comprar</button>
+              <button className='botonConsultas' onClick={handleButtonClick}>Comprar</button>
             </div>
 
             <div id='cartasConsultas'>
-              <img src={lienzo} alt='acrilicoEjemlpo' class='imagenesConsultas'></img>
-              <div class='descripcionConsultas'>
+              <img src={lienzo} alt='acrilicoEjemlpo' className='imagenesConsultas'></img>
+              <div className='descripcionConsultas'>
                 <p>Lienzo</p>
                 <p>20x20</p>
               </div>
-              <button class='botonConsultas'onClick={handleButtonClick}>Comprar</button>
+              <button className='botonConsultas'onClick={handleButtonClick}>Comprar</button>
               </div>
 
             <div id='cartasConsultas'>
-              <img src={lienzo} alt='digitalEjemplo' class='imagenesConsultas'></img>
-              <div class='descripcionConsultas'>
+              <img src={lienzo} alt='digitalEjemplo' className='imagenesConsultas'></img>
+              <div className='descripcionConsultas'>
                 <p>Lienzo</p>
                 <p>20x40</p>
               </div>
-              <button class='botonConsultas'onClick={handleButtonClick}>Comprar</button>
+              <button className='botonConsultas'onClick={handleButtonClick}>Comprar</button>
 
             </div>
 

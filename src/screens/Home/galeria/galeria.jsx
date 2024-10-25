@@ -15,7 +15,7 @@ const galeria = () => {
     <div>
         <div className='tituloGaleria'>Mi Colección</div>
         
-        <div class="galeria">
+        <div className="galeria">
             <img src={img1} className='imgGaleria img-grande'></img>
             <img src={img2} className='imgGaleria img-mediana'></img>
             <img src={img3} className='imgGaleria img-peque'></img>
