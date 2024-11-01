@@ -1,4 +1,4 @@
-import React from "react";
+import {useState} from "react";
 
 //componentes
 import './Menu.css'
@@ -10,7 +10,7 @@ import iconoLienzo from '/src/components/iconoLienzo.png'
 import iconoCarrito from '/src/components/iconoCarrito.png'
 import iconoPerfil from '/src/components/iconoPerfil.png'
 
-import Carrito from '../screens/Carrito';
+import Carrito from '../screens/carrito/Carrito';
 
 
 const Menu = () => {
@@ -23,6 +23,9 @@ const Menu = () => {
 
   const clickPerfil = () => {
     window.location.href = './login';
+  };
+  const clickCarrito = () => {
+    window.location.href = './carrito';
   };
 
   const togglePopover = () => {
