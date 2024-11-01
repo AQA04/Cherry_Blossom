@@ -10,10 +10,12 @@ import iconoLienzo from '/src/components/iconoLienzo.png'
 import iconoCarrito from '/src/components/iconoCarrito.png'
 import iconoPerfil from '/src/components/iconoPerfil.png'
 
-
+import Carrito from '../screens/Carrito';
 
 
 const Menu = () => {
+  const [productos, setProductos] = useState([]); 
+  const [isOpen, setIsOpen] = useState(false);
 
   const clickLogo = () => {
     window.location.href = './';
@@ -23,10 +25,18 @@ const Menu = () => {
     window.location.href = './login';
   };
 
-  const clickCarrito = () => {
-    window.location.href = './Carrito';
+  const togglePopover = () => {
+    setIsOpen(!isOpen);
   };
 
+  const agregarProducto = (producto) => {
+    setProductos([...productos, producto]);
+  };
+
+  const eliminarProducto = (producto) => {
+    const nuevosProductos = productos.filter((p) => p.id !== producto.id);
+    setProductos(nuevosProductos);
+  };
 
   return (
     <> 
@@ -62,6 +72,25 @@ const Menu = () => {
         <img src={iconoPerfil} onClick={clickPerfil} style={{cursor:"pointer"}} className="iconosGrandes"></img>
         </div>
 
+        <div>
+          <div 
+            className="icono-carrito" 
+            onMouseEnter={togglePopover} 
+            onMouseLeave={togglePopover}
+            style={{ position: 'relative' }} 
+          >
+            <img 
+              src={iconoCarrito} 
+              style={{ cursor: "pointer" }} 
+              className="iconosGrandes" 
+              alt="Carrito" 
+            />
+            {productos.length > 0 && <span className="cantidad">{productos.length}</span>}
+            {isOpen && (
+              <Carrito productos={productos} eliminarProducto={eliminarProducto} />
+            )}
+          </div>
+        </div>
     </div>
     </>
   );
