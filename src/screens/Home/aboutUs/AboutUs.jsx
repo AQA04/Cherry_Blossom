@@ -5,11 +5,12 @@ import iconoIg from '/src/components/iconoIg.png'
 
 
 const AboutUs = () => {
-  const instagramId = '"https://www.instagram.com/atsu_artist/"'
+  const instagramId = 'https://www.instagram.com/atsu_artist/'
+  
   return (
     <>
     <div id='aboutUs'>
-      <div class='aboutUs_texto'>
+      <div className='aboutUs_texto'>
         <h1>¿Quienes somos?</h1>
         <p></p>
         <p>Hola, Soy Lilith, artista detras de Cherry Blossom</p>      
@@ -17,13 +18,13 @@ const AboutUs = () => {
         
         <div className='a'>
           <img src={iconoIg} href={instagramId} className='iconoIg'></img>
-          <a href={instagramId} class='aboutUs_texto'>Mi instagram</a>
+          <a href={instagramId} className='aboutUs_texto'>Mi instagram</a>
         </div>
 
         </div>
 
       <div>
-        <img src={dueña} alt='fotoDueña' class='aboutUs_imagen'></img>
+        <img src={dueña} alt='fotoDueña' className='aboutUs_imagen'></img>
       </div>
 
     </div>

@@ -21,39 +21,39 @@ export default function Productos() {
 
         <div id="expoProductos">
             <div id='cartas'>
-              <img src={estuche} alt='estucheEjemplo' class='imagenesCartas'></img>
-              <div class='descripcion'>
+              <img src={estuche} alt='estucheEjemplo' className='imagenesCartas'></img>
+              <div className='descripcion'>
                 <p>Estuches</p>
                 <p>Protege tu móvil con estilo, eligiendo un diseño exclusivo que refleje tu personalidad y gustos.</p>
               </div>
-              <button class='botonCartas' onClick={handleButtonClick}>Más Info</button>
+              <button className='botonCartas' onClick={handleButtonClick}>Más Info</button>
             </div>
 
             <div id='cartas'>
-              <img src={lienzo} alt='lienzoEjemplo' class='imagenesCartas'></img>
-              <div class='descripcion'>
+              <img src={lienzo} alt='lienzoEjemplo' className='imagenesCartas'></img>
+              <div className='descripcion'>
                 <p>Lienzos</p>
                 <p>Crea obras únicas en lienzo, impresas con tus diseños o fotos favoritas para decorar cualquier espacio.</p>
               </div>
-              <button class='botonCartas' onClick={handleButtonClick}>Más Info</button>
+              <button className='botonCartas' onClick={handleButtonClick}>Más Info</button>
             </div>
 
             <div id='cartas'>
-              <img src={acrilico} alt='acrilicoEjemlpo' class='imagenesCartas'></img>
-              <div class='descripcion'>
+              <img src={acrilico} alt='acrilicoEjemlpo' className='imagenesCartas'></img>
+              <div className='descripcion'>
                 <p>Acrilico</p>
                 <p>Exhibe tus recuerdos en placas de acrílico de alta calidad, con impresión vibrante que resalta cualquier foto o diseño.</p>
               </div>
-              <button class='botonCartas'onClick={handleButtonClick}>Más Info</button>
+              <button className='botonCartas'onClick={handleButtonClick}>Más Info</button>
               </div>
 
             <div id='cartas'>
-              <img src={digital} alt='digitalEjemplo' class='imagenesCartas'></img>
-              <div class='descripcion'>
+              <img src={digital} alt='digitalEjemplo' className='imagenesCartas'></img>
+              <div className='descripcion'>
                 <p>Digital</p>
                 <p>Obtén ilustraciones digitales personalizadas, hechas a medida según tus ideas o fotos, perfectas para regalos únicos</p>
               </div>
-              <button class='botonCartas'onClick={handleButtonClick}>Más Info</button>
+              <button className='botonCartas'onClick={handleButtonClick}>Más Info</button>
 
             </div>
 
