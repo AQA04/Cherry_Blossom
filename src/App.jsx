@@ -102,6 +102,8 @@ function App() {
       </div>
 
          <div>
+         <BrowserRouter>
+         <Routes>
             <Route path="/Carrito" element={<Carrito />} />
           </Routes>
         </BrowserRouter>
