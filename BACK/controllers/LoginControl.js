@@ -1,4 +1,4 @@
-import createConnection from '../database.js'; // Ajusta la ruta según sea necesario
+import createConnection from '../DB/database.js'; // Ajusta la ruta según sea necesario
 
 //comando para ejecutar este archivo:
 //node controllers/LoginControl.js
