@@ -1,5 +1,5 @@
 import React from 'react'
-import './galeria.css'
+import './Galeria.css'
 
 //imagenes
 import img1 from '/src/Components/galeriaKillua.jpg'
@@ -9,13 +9,13 @@ import img4 from '/src/Components/galeriaWinry.jpg'
 import img5 from '/src/Components/galeriaDavier.jpg'
 
 
-const galeria = () => {
+const Galeria = () => {
   return (
     <>
     <div>
         <div className='tituloGaleria'>Mi Colección</div>
         
-        <div className="galeria">
+        <div className="Galeria">
             <img src={img1} className='imgGaleria img-grande'></img>
             <img src={img2} className='imgGaleria img-mediana'></img>
             <img src={img3} className='imgGaleria img-peque'></img>
@@ -28,4 +28,4 @@ const galeria = () => {
   )
 }
 
-export default galeria
+export default Galeria

@@ -15,69 +15,22 @@ import Login from './screens/login/Login';
 import Consultas from './screens/consultas/Consultas';
 import Carrito from './screens/carrito/Carrito';
 import Registro from './screens/registro/Registro'
-
+import Home from './screens/Home'
 function App() {
 
 
   return (
     <>
-
-      <div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Menu />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-
-      <div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Carrusel />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-
-
-
-      <div>
-      <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Productos />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-
-
-
-      <div>
-      <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<AboutUs />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-
-      <div>
-      <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Galeria />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-
-      <div>
-      <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Footer />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-
     {/* Rutas para iniciar las otras paginas*/}
 
         
-
+    <div>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
     <div>
     <BrowserRouter>
         <Routes>

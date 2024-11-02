@@ -1,33 +1,42 @@
 import React from 'react'
-import { useState } from 'react';
+import PropTypes from 'prop-types'
 
-import Menu from '../../menu/Menu'
-import Footer from '../../footer/Footer'
 import './carrito.css';
 
 const Carrito = ({ productos, eliminarProducto }) => {
-  
-    return (
+  const producto = [];
+  return (
     <>
-        <Menu/>
-        <div className="carrito-popover">
-      <h2>Carrito de Compras</h2>
-      <ul>
-        {productos.length === 0 ? (
-          <li>No hay productos en el carrito.</li>
-        ) : (
-          productos.map((producto) => (
-            <li key={producto.id}>
-              {producto.nombre} - ${producto.precio}
-              <button onClick={() => eliminarProducto(producto)}>Eliminar</button>
-            </li>
-          ))
-        )}
-      </ul>
-    </div>
-      <Footer/>
-      </>
-    );
-  };
+      
+      <div className="carrito-popover">
+        <h2>Carrito de Compras</h2>
+        <ul>
+          {productos.length === null ? (
+            <li>No hay productos en el carrito.</li>
+          ) : (
+            productos.map((producto) => (
+              <li key={producto.id}>
+                {producto.nombre} - ${producto.precio}
+                <button onClick={() => eliminarProducto(producto)}>Eliminar</button>
+              </li>
+            ))
+          )}
+        </ul>
+      </div>
+    </>
+  );
+};
 
-  export default Carrito;
+// Definición de PropTypes
+Carrito.propTypes = {
+  productos: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired, 
+      nombre: PropTypes.string.isRequired, 
+      precio: PropTypes.number.isRequired, 
+    })
+  ).isRequired, 
+  eliminarProducto: PropTypes.func.isRequired, 
+};
+
+export default Carrito;
