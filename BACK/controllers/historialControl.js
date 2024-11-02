@@ -7,11 +7,19 @@ async function busquedaHistorial(idUsuario) {
     try {
         connection = await createConnection();
 
-        // Realizar la consulta a la base de datos filtrando por Id_Usuario
         const [results] = await connection.query(
-            'SELECT Id_Usuario, Id_Pago, FechaPedido FROM Historial WHERE Id_Usuario = ?',
-            [idUsuario] // Usar el parámetro para la consulta
-        );
+            `SELECT 
+              h.Id_Usuario, 
+              h.Id_Pago, 
+              h.FechaPedido, 
+              p.Id_Producto, 
+              p.Cantidad, 
+              p.Subtotal 
+            FROM Historial h 
+            INNER JOIN Detalle_Pago p ON h.Id_Pago = p.Id_Pago 
+            WHERE h.Id_Usuario = ?`,
+            [idUsuario] 
+          );
 
         return results;
 
