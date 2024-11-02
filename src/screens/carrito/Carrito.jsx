@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 import './carrito.css';
 
 const Carrito = ({ productos, eliminarProducto }) => {
-  const producto = [];
-  return (
+  
+    return (
     <>
       
       <div className="carrito-popover">
@@ -39,4 +39,4 @@ Carrito.propTypes = {
   eliminarProducto: PropTypes.func.isRequired, 
 };
 
-export default Carrito;
+  export default Carrito;

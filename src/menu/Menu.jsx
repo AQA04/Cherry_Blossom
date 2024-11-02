@@ -10,7 +10,8 @@ import iconoLienzo from '/src/components/iconoLienzo.png';
 import iconoCarrito from '/src/components/iconoCarrito.png'; // Asegúrate de que esta ruta sea correcta
 import iconoPerfil from '/src/components/iconoPerfil.png';
 
-import Carrito from '../screens/carrito/Carrito';
+import Carrito from '../screens/Carrito';
+
 
 const Menu = () => {
   const [isPopoverVisible, setPopoverVisible] = useState(false);
@@ -42,6 +43,9 @@ const Menu = () => {
 
   const clickPerfil = () => {
     window.location.href = './login';
+  };
+  const clickCarrito = () => {
+    window.location.href = './carrito';
   };
 
   const clickLogo = () => {
