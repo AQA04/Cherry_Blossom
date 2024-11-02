@@ -16,11 +16,11 @@ const imagen =[
 
 const responsive = {
   superLargeDesktop: {
-    breakpoint: { max: 4000, min: 5000 },
+    breakpoint: { max: 4000, min: 3000 },
     items: 4,
   },
   desktop: {
-    breakpoint: { max: 5000, min: 1024 },
+    breakpoint: { max: 3000, min: 1024 },
     items: 3,
   },
 };
@@ -35,21 +35,20 @@ const Carrusel = () => {
       ssr={true}
       infinite={true}
       autoPlay={true}
-      autoPlaySpeed={5000}
+      autoPlaySpeed={3000}
       keyBoardControl={true}
       customTransition="transform 300ms ease-in-out"
       transitionDuration={300}
       containerClass="carousel-container"
-      slidesToSlide={1}
       dotListClass="custom-dot-list-style"
     >
       {imagen.map((imagen) => (
         <div key={imagen.id}>
-          <img src={imagen.src} alt={imagen.id} className="imagen" />
+          <img src={imagen.src} alt={imagen.id} />
         </div>
       ))}
     </Carousel>
-);
+  );
 };
 
 export default Carrusel;
