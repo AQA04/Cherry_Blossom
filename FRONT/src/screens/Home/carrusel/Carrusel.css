@@ -1,5 +1,5 @@
 .carousel-container {
-  max-width: 800px;
+  max-width: 95%;
   margin: 40px auto;
   padding: 20px;
   background-color: #f7f7f7;
@@ -8,12 +8,19 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.custom-dot-list-style {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
+.carousel-container img {
+  height: 200px; /* Ajusta la altura según sea necesario */
+  width: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+.custom-dot-list-style li {
+  margin: 0 5px;
+  width: 6px; /* Ajusta el ancho a un valor más pequeño */
+  height: 6px; /* Ajusta la altura a un valor más pequeño */
+  border-radius: 50%; /* Mantiene la forma circular */
+  background-color: #ccc; /* Color del punto */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el punto */
 }
 
 .custom-dot-list-style li {

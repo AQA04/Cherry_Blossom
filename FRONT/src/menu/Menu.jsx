@@ -68,10 +68,6 @@ const Menu = () => {
         </div>
 
         <div>
-        <img src={iconoCarrito}onClick={clickCarrito} style={{cursor:"pointer"}} className="iconosGrandes"></img>
-        </div>
-
-        <div>
         <img src={iconoPerfil} onClick={clickPerfil} style={{cursor:"pointer"}} className="iconosGrandes"></img>
         </div>
 
