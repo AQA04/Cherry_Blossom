@@ -5,10 +5,10 @@ const createConnection = async () => {
     host: 'localhost',
     user: 'root',
     password: 'alejandro717',
-    database: 'cherryBlossom',
-
-    
+    database: 'cherry_bd',    
   });
 };
+
+createConnection();
 
 export default createConnection;

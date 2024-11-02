@@ -1,12 +1,13 @@
-import createConnection from '../database.js';
+import createConnection from '../database.js'; // Ajusta la ruta según sea necesario
 
 //comando para ejecutar este archivo:
-//node BACK/controllers/LoginControl.js
+//node controllers/LoginControl.js
 
 
 
-async function usersBD(userName, userPsw) {
+async function loginUsuario(userName, userPsw) {
   let connection;
+  let userFound = false; // Variable para controlar si se encontró el usuario
 
   try {
     connection = await createConnection();
@@ -14,22 +15,29 @@ async function usersBD(userName, userPsw) {
     // Realizar la consulta a la base de datos
     const [results] = await connection.query('SELECT * FROM Usuarios');
     
+    
+
+    
     results.forEach(user => {
-      if(userName == user.Nombre && userPsw == user.Contraseña){
-        console.log("Bienvenido", userName)
-      }
-    });
+      if (userName === user.Nombre && userPsw === user.Contraseña) {
+        console.log("Bienvenid@", userName, userPsw);
+        userFound = true; // Cambia a true si se encuentra el usuario 
+    }});
+
+
+    return userFound
 
   } catch (err) {
     console.error('Error en la conexión o en la consulta:', err);
+
   } finally {
     if (connection) {
       await connection.end();
     }
   }
 }
-
-usersBD("Lilith", "123")
-
 // Llamar a la función
-usersBD().catch(err => console.error(err));
+loginUsuario().catch(err => console.error(err));
+
+// Exportar la función como exportación por defecto
+export default loginUsuario;
