@@ -3,3 +3,14 @@ node_modules/
 
 # Ignorar archivos de log
 *.log
+
+# Ignorar archivos de entorno
+.env
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas de compilación
+dist/
+build/
