@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'title'; 
+    src: url('/src/components/fonts/title.TTF');
+  }
+  
+  @font-face {
+    font-family: 'text'; 
+    src: url('/src/components/fonts/text.TTF');
+  }
+
+#tituloConsultas{
+
+    height: 100px;
+    width: 100%;
+
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    
+    font-size: 250%;
+    font-family: title, serif;
+    color: rgb(38, 35, 54);
+    font-style: italic;
+
+}
+
+#expoConsultas {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+
+    margin-bottom: 5%;
+}
+
+#cartasConsultas {
+
+    height: 100%;
+    width: 20%;
+
+    font-family: text, serif;
+    color: black;
+    border-color: black;
+    box-shadow: 0 0 10px #989797;
+    border-radius: 4px;
+
+    text-align: center;
+
+    margin: 10px;
+
+}
+
+.imagenesConsultas{
+    height: 50%;
+    width: 100%;
+}
+
+.botonConsultas{
+    height: 5%;
+    width: 30%;
+    background-color: rgb(81, 72, 138);
+    color: white;
+    border-radius: 3px;
+
+    margin-bottom: 2%;
+}
+
+.botonConsultas:hover {
+    cursor:pointer;
+    
+
+    background-color: rgb(173, 170, 198);
+    border-color: black;
+    color: black;
+    transition: 1s;
+}
+
+.descripcionConsultas {
+    height: 10%;
+    width: 100%;
+
+    font-size: 95%;
+}

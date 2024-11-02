@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'title'; 
+    src: url('/src/components/fonts/title.TTF');
+  }
+  
+  @font-face {
+    font-family: 'text'; 
+    src: url('/src/components/fonts/text.TTF');
+  }
+
+#padreFooter {
+    height: 90%;
+    width: 98%;
+
+    display: flex;
+    background-color: #d7dff4;
+    margin-left: 1%;
+    box-shadow: 0 0 10px #989797;
+}
+
+.textoFooter {
+    width: 70%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 80%;
+    font-family:text, serif;
+    
+}
+
+.linkFooter {
+    text-decoration: none;
+    color: black;
+    
+}
+
+.tituloFooter {
+    font-size: 150%;
+    font-weight: bold;
+    font-family:title, serif;
+}
+
+.logoFooter{
+    width: 70%;
+    align-content: center;
+    justify-content: center;
+}
