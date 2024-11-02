@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <>
     <div id='aboutUs'>
-      <div class='aboutUs_texto'>
+      <div className='aboutUs_texto'>
         <h1>Quienes somos?</h1>
         <p></p>
         <p>Hola, Soy Lilith, artista detras de Cherry Blossom</p>      
@@ -19,7 +19,7 @@ const AboutUs = () => {
         </div>
 
       <div>
-        <img src={dueña} alt='fotoDueña' class='aboutUs_imagen'></img>
+        <img src={dueña} alt='fotoDueña' className='aboutUs_imagen'></img>
       </div>
 
     </div>
