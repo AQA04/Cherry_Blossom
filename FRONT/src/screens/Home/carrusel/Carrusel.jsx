@@ -5,13 +5,13 @@ import banner2 from '/src/components/banner2.png';
 import banner3 from '/src/components/banner3.png';
 import banner4 from '/src/components/banner4.png';
 
-import './Carrusel.css'
+import './Carrusel.css';
 
-const imagen =[
-  { id: 1, src: banner1 },
-  { id: 2, src: banner2 },
-  { id: 3, src: banner3 },
-  { id: 4, src: banner4 },
+const imagenes = [
+  { id: 1, src: banner1, alt: 'Banner 1' },
+  { id: 2, src: banner2, alt: 'Banner 2' },
+  { id: 3, src: banner3, alt: 'Banner 3' },
+  { id: 4, src: banner4, alt: 'Banner 4' },
 ];
 
 const responsive = {
@@ -39,12 +39,12 @@ const Carrusel = () => {
       keyBoardControl={true}
       customTransition="transform 300ms ease-in-out"
       transitionDuration={300}
-      containerClass="carousel-container"
-      dotListClass="custom-dot-list-style"
+      containerClass="carousel-container" // Corregido
+      dotListClass="custom-dot-list-style" // Corregido
     >
-      {imagen.map((imagen) => (
+      {imagenes.map((imagen) => (
         <div key={imagen.id}>
-          <img src={imagen.src} alt={imagen.id} />
+          <img src={imagen.src} alt={imagen.alt} /> {/* Usar un texto alternativo más descriptivo */}
         </div>
       ))}
     </Carousel>
@@ -52,4 +52,3 @@ const Carrusel = () => {
 };
 
 export default Carrusel;
-
