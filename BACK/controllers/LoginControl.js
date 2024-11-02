@@ -1,4 +1,4 @@
-import createConnection from 'Cherry_Blossom/BACK/database.js';
+import createConnection from '../database.js';
 
 //comando para ejecutar este archivo:
 //node BACK/controllers/LoginControl.js
@@ -29,7 +29,7 @@ async function usersBD(userName, userPsw) {
   }
 }
 
-usersBD("Lilith", "1243")
+usersBD("Lilith", "123")
 
 // Llamar a la función
 usersBD().catch(err => console.error(err));

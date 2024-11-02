@@ -5,7 +5,9 @@ const createConnection = async () => {
     host: 'localhost',
     user: 'root',
     password: 'alejandro717',
-    database: 'cherryBlossom'
+    database: 'cherryBlossom',
+
+    
   });
 };
 
