@@ -5,7 +5,7 @@ import Menu from '../../menu/Menu'
 import Footer from '../../footer/Footer'
 import './carrito.css';
 
-const Carrito = ({ productos, eliminarProducto }) => {
+const carritoUsuario = ({ productos, eliminarProducto }) => {
   
     return (
     <>
@@ -13,7 +13,7 @@ const Carrito = ({ productos, eliminarProducto }) => {
         <div className="carrito-popover">
       <h2>Carrito de Compras</h2>
       <ul>
-        {productos.length === 0 ? (
+        {productos.size === 0 ? (
           <li>No hay productos en el carrito.</li>
         ) : (
           productos.map((producto) => (
@@ -30,4 +30,4 @@ const Carrito = ({ productos, eliminarProducto }) => {
     );
   };
 
-  export default Carrito;
+  export default carritoUsuario;
