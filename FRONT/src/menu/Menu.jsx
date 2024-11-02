@@ -7,8 +7,9 @@ import iconoAcrilico from '/src/components/iconoAcrilico.png';
 import iconoDigital from '/src/components/iconoDigital.png';
 import iconoEstuche from '/src/components/iconoEstuche.png';
 import iconoLienzo from '/src/components/iconoLienzo.png';
-import iconoCarrito from '/src/components/iconoCarrito.png'; // Asegúrate de que esta ruta sea correcta
+import iconoCarrito from '/src/components/iconoCarrito.png'; 
 import iconoPerfil from '/src/components/iconoPerfil.png';
+
 
 import Carrito from '../screens/carrito/Carrito';
 
@@ -45,14 +46,14 @@ const Menu = () => {
   };
 
   const clickLogo = () => {
-    // Lógica para manejar el clic en el logo, si es necesario
-    console.log("Logo clickeado");
+    window.location.href = './Home';
   };
 
   return (
     <> 
       <div id="menuPrincipal">
         <img src={logo} onClick={clickLogo} style={{ cursor: "pointer" }} alt="logoMenu" id="logoMenu" />
+        
 
         <div id="itemEicono">
           <img src={iconoAcrilico} className="iconosMenu" alt="Acrilico" />
