@@ -3,12 +3,6 @@ import {BrowserRouter, Route, Routes } from 'react-router-dom';
 
 /*-----Components-----*/
 import './App.css'
-import Menu from './menu/Menu'
-import Carrusel from './screens/Home/carrusel/Carrusel'
-import AboutUs from './screens/Home/aboutUs/AboutUs';
-import Footer from './footer/Footer';
-import Productos from './screens/Home/productos/Productos';
-import Galeria from './screens/Home/galeria/galeria'
 
 import Info from './screens/info/Info';
 import Login from './screens/login/Login';
