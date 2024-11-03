@@ -1,4 +1,4 @@
-import createConnection from '../database.js';
+import createConnection from '../DB/database.js';
 
 
 
