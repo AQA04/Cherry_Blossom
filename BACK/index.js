@@ -5,7 +5,7 @@ import busquedaHistorial from './controllers/historialControl.js'
 import agregarAlCarrito from './controllers/carritoControl.js'
 
 
-signupUsuario("a", "b", "1", "2", "man@gmail.com", "333")
+//signupUsuario("a", "b", "1", "2", "man@gmail.com", "333")
 
 
 loginUsuario("Manuel", "222")
@@ -14,5 +14,5 @@ loginUsuario("Manuel", "222")
 
 //busquedaHistorial('1')  
 
-//agregarAlCarrito(1, 1, 2) // Juan Pérez agrega 2 Lienzos 20 x 30
+agregarAlCarrito(1, 6, 2) // Juan Pérez agrega 2 Lienzos 20 x 30
 
