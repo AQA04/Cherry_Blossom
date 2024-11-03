@@ -42,12 +42,6 @@ async function agregarAlCarrito(idUsuario, idProducto, cantidad) {
     }
 }
 
-// Llamar a la función para agregar productos al carrito
-agregarAlCarrito(1, 1, 2) // Juan Pérez agrega 2 Lienzos 20 x 30
-    .then(result => {
-        console.log('Resultado de la operación:', result);
-    })
-    .catch(err => console.error(err));
 
 // Exportar la función como exportación por defecto
 export default agregarAlCarrito;

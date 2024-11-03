@@ -21,7 +21,7 @@ async function busquedaHistorial(idUsuario) {
             [idUsuario] 
           );
 
-        return results;
+        return console.log(results);
 
     } catch (err) {
         console.error('Error en la conexión o en la consulta:', err);
@@ -34,12 +34,7 @@ async function busquedaHistorial(idUsuario) {
     }
 }
 
-// Llamar a la función con un Id de usuario específico
-busquedaHistorial(1) // Cambia el número según el Id de usuario que desees buscar
-    .then(historial => {
-        console.log('Historial encontrado:', historial);
-    })
-    .catch(err => console.error(err));
+
 
 // Exportar la función como exportación por defecto
 export default busquedaHistorial;

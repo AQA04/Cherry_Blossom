@@ -14,7 +14,7 @@ async function busquedaProductos(Tipo_Producto) {
             [Tipo_Producto] // Usar el parámetro para la consulta
         );
 
-        return results;
+        return console.log(results);
 
     } catch (err) {
         console.error('Error en la conexión o en la consulta:', err);
@@ -26,13 +26,6 @@ async function busquedaProductos(Tipo_Producto) {
         }
     }
 }
-
-// Llamar a la función con el parámetro 'Lienzo'
-busquedaProductos('Lienzo')
-    .then(products => {
-        console.log('Productos encontrados:', products);
-    })
-    .catch(err => console.error(err));
 
 // Exportar la función como exportación por defecto
 export default busquedaProductos;
