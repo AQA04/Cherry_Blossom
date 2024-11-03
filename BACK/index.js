@@ -10,8 +10,8 @@ import agregarAlCarrito from './controllers/carritoControl.js'
 
 loginUsuario("Manuel", "222")
 
-//busquedaProductos('Lienzo')
+busquedaProductos('Lienzo')
 
-//busquedaHistorial('1')
+busquedaHistorial('1')  
 
 agregarAlCarrito(1, 1, 2) // Juan Pérez agrega 2 Lienzos 20 x 30
