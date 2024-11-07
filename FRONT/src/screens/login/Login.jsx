@@ -1,7 +1,7 @@
 import React from 'react'
 import '../login/Login.css'
 import iconoPerfil from '/src/Components/iconoPerfil.jpg'
-import validacionLogin from './Login.js'
+import validacionLogin from './Login_Val.js'
 
 const Login = () => {
   
