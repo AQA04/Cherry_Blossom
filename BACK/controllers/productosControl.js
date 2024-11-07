@@ -1,6 +1,5 @@
+// controllers/productosControl.js
 import createConnection from '../DB/database.js';
-
-// Tipo_Producto ENUM('Lienzo', 'Acrilico', 'Estuche', 'Dibujo Digital'),
 
 async function busquedaProductos(Tipo_Producto) {
     let connection;
@@ -14,7 +13,7 @@ async function busquedaProductos(Tipo_Producto) {
             [Tipo_Producto] // Usar el parámetro para la consulta
         );
 
-        return console.log(results);
+        return results; // Devolver los resultados
 
     } catch (err) {
         console.error('Error en la conexión o en la consulta:', err);

@@ -1,6 +1,5 @@
 import createConnection from '../DB/database.js';
 
-
 async function busquedaHistorial(idUsuario) {
     let connection;
 
@@ -19,9 +18,9 @@ async function busquedaHistorial(idUsuario) {
             INNER JOIN Detalle_Pago p ON h.Id_Pago = p.Id_Pago 
             WHERE h.Id_Usuario = ?`,
             [idUsuario] 
-          );
+        );
 
-        return console.log(results);
+        return results; // Cambia esto para devolver los resultados
 
     } catch (err) {
         console.error('Error en la conexión o en la consulta:', err);
@@ -33,8 +32,6 @@ async function busquedaHistorial(idUsuario) {
         }
     }
 }
-
-
 
 // Exportar la función como exportación por defecto
 export default busquedaHistorial;

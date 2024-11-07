@@ -1,18 +1,26 @@
 // app.js
-import express from 'express'; // Importa Express
-import config from './config.js'; // Asegúrate de que esta línea esté antes de usar 'config'
+import express from 'express';
+import config from './config.js';
+import carritoRoutes from './routes/carritoRoutes.js';
+import historialRoutes from './routes/historialRoutes.js';
+import loginRoutes from './routes/loginRoutes.js';
+import productosRoutes from './routes/productosRoutes.js';
+import singupRoutes from './routes/singupRoutes.js';
 
-const app = express(); // Crea la instancia de la aplicación
+const app = express();
+app.use(express.json());
 
-// Configura el puerto usando la configuración importada
-app.set('port', config.app.port); // Asegúrate de que 'config' esté definido antes de esta línea
+app.set('port', config.app.port);
 
 // Define tus rutas aquí
+app.use('/api/Carrito', carritoRoutes);
+app.use('/api/Historial', historialRoutes);
+app.use('/api/Login', loginRoutes);
+app.use('/api/Productos', productosRoutes);
+app.use('/api/Singup', singupRoutes);
+
 app.get('/', (req, res) => {
     res.send('¡Hola, mundo!');
 });
 
-// Inicia el servidor
-app.listen(app.get('port'), () => {
-    console.log(`Servidor corriendo en el puerto ${app.get('port')}`);
-});
+export default app;
