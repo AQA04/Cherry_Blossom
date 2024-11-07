@@ -1,17 +1,19 @@
 import React from 'react'
 import '../login/Login.css'
 import iconoPerfil from '/src/Components/iconoPerfil.jpg'
+import validacionLogin from './Login.js'
 
 const Login = () => {
   
   const handleButtonIngresar = () => {
-    window.location.href = './';
+    validacionLogin();
   };
 
   const handleButtonCancelar = () => {
     window.location.href = './';
   };
-  
+
+
   return (
     <>
     <div id='superpadre'>
