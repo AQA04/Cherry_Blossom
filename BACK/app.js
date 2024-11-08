@@ -15,7 +15,8 @@ const corsOptions = {
     allowedHeaders: ['Content-Type'], // Encabezados permitidos
 };
 
-app.use(cors());
+// Usa las opciones de CORS
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.set('port', config.app.port);

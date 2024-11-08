@@ -1,41 +1,23 @@
 // controllers/LoginControl.js
-import createConnection from '../DB/database.js'; // Ajusta la ruta según sea necesario
+import createConnection from '../DB/database.js';
 
-async function LoginControl(userName, userPsw_ctl) {
+async function LoginControl(Correo, userPsw_ctl) {
     let connection;
 
     try {
         connection = await createConnection();
 
-        // Realizar la consulta a la base de datos buscando el usuario por nombre
+        // Realizar la consulta a la base de datos para buscar el usuario
         const [results] = await connection.query(
-            'SELECT * FROM Usuarios WHERE Nombre = ?',
-            [userName]
+            'SELECT * FROM Usuarios WHERE Correo = ? AND Contraseña = ?',
+            [Correo, userPsw_ctl] // Usar los parámetros para la consulta
         );
 
-        console.log(results)
-        
-
-        // Verificar si se encontró un usuario
-        if (results.length === 0) { // Cambié length() a length
-            console.log("Entro a la === 0");
-            return []; // Retornar un array vacío si no se encontró el usuario
-        }
-
-        const user = results[0];
-
-        // Comparar la contraseña proporcionada con la almacenada (sin hashing)
-        if (userPsw_ctl !== user.Contraseña) {
-            console.log("Entro a la contraseña")
-            return (results); // Retornar un array vacío si la contraseña no coincide
-        }
-
-        // Si la autenticación es exitosa, devolver toda la información del usuario
-        return (results); // Retornar un array con la información del usuario
+        return results; // Devolver los resultados
 
     } catch (err) {
         console.error('Error en la conexión o en la consulta:', err);
-        return (results); // Retornar un array vacío en caso de error
+        throw err; // Lanzar el error para que pueda ser manejado por el llamador
 
     } finally {
         if (connection) {
