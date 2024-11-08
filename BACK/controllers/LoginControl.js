@@ -31,6 +31,5 @@ async function loginUsuario(userName, userPsw) {
         }
     }
 }
-
 // Exportar la función como exportación por defecto
 export default loginUsuario;
