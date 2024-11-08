@@ -6,7 +6,7 @@ const validacionLogin = async (userName, userPsw, setErrorMessage) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ userName_ctl: userName, userPsw_ctl: userPsw }),
+            body: JSON.stringify({ userName: userName, userPsw_ctl: userPsw }), // Cambié userName_ctl a userName
         });
 
         if (!response.ok) {
