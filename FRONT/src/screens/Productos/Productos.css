@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'title'; 
+    src: url('/src/components/fonts/title.TTF');
+}
+  
+@font-face {
+    font-family: 'text'; 
+    src: url('/src/components/fonts/text.TTF');
+}
+
+#tituloProductos {
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 250%;
+    font-family: title, serif;
+    color: rgb(38, 35, 54);
+    font-style: italic;
+    margin: 20px 0; /* Espacio alrededor del título */
+}
+
+#expoProductos {
+    height: auto; /* Cambiado a auto para adaptarse al contenido */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cartas se ajusten en varias filas */
+    align-content: flex-start; /* Alinea el contenido al inicio */
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+.cartasProductos {
+    height: auto; /* Cambiado a auto para adaptarse al contenido */
+    width: 20%;
+    font-family: text, serif;
+    color: black;
+    border: 1px solid black; /* Añadido para definir el borde */
+    box-shadow: 0 0 10px #989797;
+    border-radius: 4px;
+    text-align: center;
+    margin: 10px;
+    padding: 10px; /* Añadido para espacio interno */
+    background-color: white; /* Añadido para un fondo blanco */
+}
+
+.descripcionProductos {
+    height: auto; /* Cambiado a auto para adaptarse al contenido */
+    width: 100%;
+    font-size: 95%;
+    margin: 5px 0; /* Añadido para espacio alrededor de la descripción */
+}
+
+.precioProductos {
+    font-size: 90%; /* Tamaño de fuente para el precio */
+    color: rgb(100, 100, 100); /* Color gris para el precio */
+}
+
+.botonProductos {
+    height: 40px; /* Ajustado para un tamaño fijo */
+    width: 80%; /* Ajustado para que ocupe más espacio */
+    background-color: rgb(81, 72, 138);
+    color: white;
+    border-radius: 3px;
+    margin-bottom: 2%;
+    border: none; /* Eliminado el borde por defecto */
+    cursor: pointer; /* Cambiado para indicar que es clickeable */
+}
+
+.botonProductos:hover {
+    background-color: rgb(173, 170, 198);
+    color: black;
+    transition: background-color 0.3s; /* Transición más suave */
+}

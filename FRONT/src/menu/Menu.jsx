@@ -57,22 +57,22 @@ const Menu = () => {
 
         <div id="itemEicono">
           <img src={iconoAcrilico} className="iconosMenu" alt="Acrilico" />
-          <a href="./consultas" className='linkMenu'>Acrilico</a>
+          <a href="./Productos" className='linkMenu'>Acrilico</a>
         </div>
 
         <div id="itemEicono">
           <img src={iconoDigital} className="iconosMenu" alt="Digital" />
-          <a href="./consultas" className='linkMenu'>Digital</a>
+          <a href="./Productos" className='linkMenu'>Digital</a>
         </div>
 
         <div id="itemEicono">
           <img src={iconoEstuche} className="iconosMenu" alt="Estuche" />
-          <a href="./consultas" className='linkMenu'>Estuche</a>
+          <a href="./Productos" className='linkMenu'>Estuche</a>
         </div>
 
         <div id="itemEicono">
           <img src={iconoLienzo} className="iconosMenu" alt="Lienzo" />
-          <a href="./consultas" className='linkMenu'>Lienzo</a>
+          <a href="./Productos" className='linkMenu'>Lienzo</a>
         </div>
 
         <div>
