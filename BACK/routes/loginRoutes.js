@@ -1,27 +1,19 @@
 // routes/loginRoutes.js
 import express from 'express';
-import loginUsuario from '../controllers/LoginControl.js'; // Importar la función del controlador
+import loginControl from '../controllers/LoginControl.js'
 
 const router = express.Router();
 
-// Definir la ruta POST para iniciar sesión
-router.post('/', async (req, res) => {
-    const { userName, userPsw } = req.body; // Obtener el nombre de usuario y la contraseña del cuerpo de la solicitud
-
+// Definir la ruta GET para /api/login
+router.get('/', async(req, res) => {
+    const {userName, userPsw_ctl} = req.body
     try {
-        const isLoggedIn = await loginUsuario(userName, userPsw);
-        if (isLoggedIn) {
-            res.status(200).json({ message: "Inicio de sesión exitoso" });
-        } else {
-            res.status(401).json({ message: "Usuario o contraseña incorrectos" });
-        }
-    } catch (error) {
-        res.status(500).json({ message: "Error en el servidor" });
-    }
-});
+        const results = await loginControl(userName, userPsw_ctl)
+        res.json(results);
 
-router.get('/', (req, res) => {
-    res.status(200).json({ message: 'Endpoint para iniciar sesión. Usa POST para autenticarte.' });
+    } catch (error) {
+        res.status(500).send('Error al buscar productos');
+    }
 });
 
 // Exportar el enrutador
