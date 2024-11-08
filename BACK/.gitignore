@@ -1,6 +1,12 @@
+
 # Ignorar la carpeta node_modules
 ./node_modules
 node_modules
+
+# Dependency directories
+node_modules/
+
+
 # Ignorar archivos de log
 *.log
 

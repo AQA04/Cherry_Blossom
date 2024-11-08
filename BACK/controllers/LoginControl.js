@@ -25,6 +25,5 @@ async function LoginControl(Correo, userPsw_ctl) {
         }
     }
 }
-
 // Exportar la función como exportación por defecto
 export default LoginControl;
