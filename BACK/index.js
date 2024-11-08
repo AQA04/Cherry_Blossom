@@ -7,16 +7,9 @@ import historialRoutes from './routes/historialRoutes.js';
 import loginRoutes from './routes/loginRoutes.js';
 import productosRoutes from './routes/productosRoutes.js';
 import singupRoutes from './routes/singupRoutes.js';
+import loginUsuario from './controllers/LoginControl.js';
 
-
-import { agregarAlCarrito } from './controllers/carritoControl.js'; // Importar como exportación nombrada
-
-// Ejemplos de uso (puedes descomentarlos cuando los necesites)
-// signupUsuario("a", "b", "1", "2", "man@gmail.com", "333");
-// loginUsuario("Manuel", "222");
-// busquedaProductos('Lienzo');
-// busquedaHistorial('1');  
-// agregarAlCarrito(1, 5, 2); // Juan Pérez agrega 2 Lienzos 20 x 30
+loginUsuario("Manuel", "222")
 
 const app = express();
 app.use(express.json()); // Importa la instancia de la aplicación

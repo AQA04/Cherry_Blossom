@@ -45,13 +45,14 @@
 
 .inputs {
     width: 90%;
-    height: 10%;
+    height: 40px;
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 120%;
 
     border-color: cyan;
     border-radius: 20px;
+    margin-bottom: 1%;
 
     justify-content: center; 
     align-items: center; 
@@ -59,7 +60,7 @@
 }
 
 .ingresar {
-    height: 10%;
+    height: 50px;
     width: 30%;
 
     background-color: #f0f0f0;
@@ -82,7 +83,7 @@
 }
 
 .cancelar {
-    height: 10%;
+    height: 50px;
     width: 30%;
 
     background-color: #f0f0f0;
