@@ -18,3 +18,4 @@ router.get('/', async(req, res) => {
 
 // Exportar el enrutador
 export default router;
+
