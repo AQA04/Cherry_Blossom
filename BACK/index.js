@@ -1,5 +1,6 @@
 // index.js
 import express from 'express'; // Asegúrate de usar la sintaxis de importación ES
+
 import config from './config.js'; // Importa tu configuración
 import carritoRoutes from './routes/carritoRoutes.js';
 import historialRoutes from './routes/historialRoutes.js';
