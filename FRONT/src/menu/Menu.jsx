@@ -9,7 +9,7 @@ import iconoEstuche from '/src/components/iconoEstuche.png';
 import iconoLienzo from '/src/components/iconoLienzo.png';
 import iconoCarrito from '/src/components/iconoCarrito.png'; 
 import iconoPerfil from '/src/components/iconoPerfil.png';
-
+import iconoHistorial from '/src/components/iconoHistorial.png';
 
 import Carrito from '../screens/carrito/Carrito';
 
@@ -45,6 +45,10 @@ const Menu = () => {
     window.location.href = './login';
   };
 
+  const clickHistorial = () => {
+    window.location.href = './Historial';
+  };
+
   const clickLogo = () => {
     window.location.href = './Home';
   };
@@ -76,11 +80,14 @@ const Menu = () => {
         </div>
 
         <div>
+          <img src={iconoHistorial} onClick={clickHistorial} style={{ cursor: "pointer" }} className="iconosGrandes" alt="Perfil" />
+        </div>
+
+        <div>
           <img src={iconoPerfil} onClick={clickPerfil} style={{ cursor: "pointer" }} className="iconosGrandes" alt="Perfil" />
         </div>
 
         <div>
-          {/* Reemplaza el botón por la imagen del carrito */}
           <img 
             src={iconoCarrito} 
             onClick={togglePopover} 

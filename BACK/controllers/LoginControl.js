@@ -1,25 +1,19 @@
 // controllers/LoginControl.js
-import createConnection from '../DB/database.js'; // Ajusta la ruta según sea necesario
+import createConnection from '../DB/database.js';
 
-async function loginUsuario(userName, userPsw) {
+async function LoginControl(Correo, userPsw_ctl) {
     let connection;
 
     try {
         connection = await createConnection();
 
-        // Realizar la consulta a la base de datos buscando el usuario por nombre y contraseña
+        // Realizar la consulta a la base de datos para buscar el usuario
         const [results] = await connection.query(
-            'SELECT * FROM Usuarios WHERE Nombre = ? AND Contraseña = ?',
-            [userName, userPsw]
+            'SELECT * FROM Usuarios WHERE Correo = ? AND Contraseña = ?',
+            [Correo, userPsw_ctl] // Usar los parámetros para la consulta
         );
 
-        if (results.length > 0) {
-            console.log("Bienvenid@", userName);
-            return true; // Usuario encontrado
-        } else {
-            console.log("Usuario o contraseña incorrectos");
-            return false; // Usuario no encontrado
-        }
+        return results; // Devolver los resultados
 
     } catch (err) {
         console.error('Error en la conexión o en la consulta:', err);
@@ -32,4 +26,4 @@ async function loginUsuario(userName, userPsw) {
     }
 }
 // Exportar la función como exportación por defecto
-export default loginUsuario;
+export default LoginControl;

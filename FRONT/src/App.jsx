@@ -10,6 +10,7 @@ import Login from './screens/login/Login';
 import Productos from './screens/Productos/Productos';
 import Carrito from './screens/carrito/Carrito';
 import Registro from './screens/registro/Registro';
+import Historial from './screens/historial/Historial'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/Productos" element={<Productos />} />
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/registro" element={<Registro />} />
+        <Route path="/Historial" element={<Historial />} />
       </Routes>
     </BrowserRouter>
   );
