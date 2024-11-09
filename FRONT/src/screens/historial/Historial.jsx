@@ -10,7 +10,7 @@ const Historial = () => {
     <Menu/>
 
     <div>
-        Bienvenido al historial cochinota
+        
     </div>
 
     <Footer/>
