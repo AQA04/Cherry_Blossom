@@ -1,6 +1,5 @@
-// app.js
-import express from 'express';
 import cors from 'cors';
+import express from 'express';
 import config from './config.js';
 import carritoRoutes from './routes/carritoRoutes.js';
 import historialRoutes from './routes/historialRoutes.js';
@@ -9,17 +8,16 @@ import productosRoutes from './routes/productosRoutes.js';
 import singupRoutes from './routes/singupRoutes.js';
 
 const app = express();
+
+// Configuración de CORS
 const corsOptions = {
     origin: 'http://localhost:5173', // Permitir solo tu frontend
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
-    allowedHeaders: ['Content-Type'], // Encabezados permitidos
+    allowedHeaders: ['Content-Type'], // Encabezados permitidos
 };
-
 
 // Usa las opciones de CORS
 app.use(cors(corsOptions));
-
-app.use(cors());
 
 app.use(express.json());
 

@@ -1,6 +1,7 @@
+///historialControl.js
 import createConnection from '../DB/database.js';
 
-async function busquedaHistorial(idUsuario) {
+async function busquedaHistorial() {
     let connection;
 
     try {
@@ -15,12 +16,10 @@ async function busquedaHistorial(idUsuario) {
               p.Cantidad, 
               p.Subtotal 
             FROM Historial h 
-            INNER JOIN Detalle_Pago p ON h.Id_Pago = p.Id_Pago 
-            WHERE h.Id_Usuario = ?`,
-            [idUsuario] 
+            INNER JOIN Detalle_Pago p ON h.Id_Pago = p.Id_Pago`
         );
 
-        return results; // Cambia esto para devolver los resultados
+        return results; // Devolver todos los resultados
 
     } catch (err) {
         console.error('Error en la conexión o en la consulta:', err);
