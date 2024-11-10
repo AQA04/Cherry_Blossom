@@ -1,0 +1,54 @@
+/* Historial.css */
+
+/* Estilos generales para la página del historial */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Contenedor principal del historial */
+ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrar la lista */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilos para cada elemento de la lista */
+li {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo de los párrafos dentro de cada elemento */
+li p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #34495e;
+}
+
+/* Estilo para el error */
+.error {
+    color: #e74c3c;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Estilo de carga */
+p.loading {
+    text-align: center;
+    font
