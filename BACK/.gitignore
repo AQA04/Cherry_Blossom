@@ -1,11 +1,5 @@
-
 # Ignorar la carpeta node_modules
-./node_modules
-node_modules
-
-# Dependency directories
 node_modules/
-
 
 # Ignorar archivos de log
 *.log
@@ -20,3 +14,12 @@ Thumbs.db
 # Ignorar carpetas de compilación
 dist/
 build/
+
+# Ignorar archivos de configuración de IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignorar archivos de prueba
+coverage/
