@@ -1,12 +1,16 @@
 const validacionLogin = async (userName, userPsw, setErrorMessage) => {
-    console.log("por aqui si paso", userName)
+    console.log("por aqui si paso", userName);
     try {
-        const response = await fetch('http://localhost:3000/api/login', {
-            method: 'POST',
+        // Construir la URL con parámetros de consulta
+        const url = new URL('http://localhost:3000/api/login');
+        url.searchParams.append('userName', userName);
+        url.searchParams.append('userPsw_ctl', userPsw); // Asegúrate de que el nombre de la propiedad sea correcto
+
+        const response = await fetch(url, {
+            method: 'GET', // Usando GET
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ userName: userName, userPsw_ctl: userPsw }), // Cambié userName_ctl a userName
         });
 
         if (!response.ok) {

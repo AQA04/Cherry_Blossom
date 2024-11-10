@@ -21,6 +21,8 @@ const LoginComponent = () => {
         setUsername("");
         setUserpsw("");
         setErrorMessage(""); // Limpiar el mensaje de error al cancelar
+        window.location.href = './Home';
+
     };
 
     return (
