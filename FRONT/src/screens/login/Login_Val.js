@@ -1,29 +1,45 @@
-const validacionLogin = async (userName, userPsw, setErrorMessage) => {
-    console.log("por aqui si paso", userName)
+import { toast } from 'react-toastify'; // Asegúrate de que esta línea esté presente
+
+const validacionLogin = async (userMail, userPsw, setErrorMessage) => {
     try {
-        const response = await fetch('http://localhost:3000/api/login', {
-            method: 'POST',
+        const url = new URL('http://localhost:3000/api/Login');
+        const response = await fetch(url, {
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ userName: userName, userPsw_ctl: userPsw }), // Cambié userName_ctl a userName
         });
 
         if (!response.ok) {
-            throw new Error('Error en la respuesta del servidor');
+            throw new Error(`Error en la respuesta: ${response.status}`);
         }
 
-        const data = await response.json();
+        const usuarios = await response.json();
+        let userFound = false;
 
-        if (data.success) {
-            console.log('Inicio de sesión exitoso:', data.user);
-        } else {
-            setErrorMessage(data.message);
+        if (Array.isArray(usuarios)) {
+            for (const usuario of usuarios) {
+                if (usuario.Correo === userMail) {
+                    userFound = true;
+                    toast.success("¡Bienvenido!"); // Mostrar mensaje de éxito
+                    
+                    // Esperar 5 segundos antes de redirigir
+                    setTimeout(() => {
+                        window.location.href = './Home'; // Redirigir después de 5 segundos
+                    }, 5000);
+                    
+                    break; // Salir del bucle una vez que se encuentra el usuario
+                }
+            }
         }
+
+        if (!userFound) {
+            toast.error("Usuario no encontrado"); // Mostrar mensaje de error
+        }
+
     } catch (error) {
-        console.error('Error al iniciar sesión:', error);
-        setErrorMessage('Error en el servidor. Inténtalo de nuevo más tarde.');
+        console.error('Error al iniciar sesión')
     }
-};
+}
 
-export default validacionLogin;
+export default validacionLogin

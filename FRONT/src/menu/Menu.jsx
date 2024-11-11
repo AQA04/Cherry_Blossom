@@ -61,7 +61,7 @@ const Menu = () => {
 
         <div id="itemEicono">
           <img src={iconoAcrilico} className="iconosMenu" alt="Acrilico" />
-          <a href="./Productos" className='linkMenu'>Acrilico</a>
+          <a href="./Productos" className='linkMenu'>Acrílico</a>
         </div>
 
         <div id="itemEicono">

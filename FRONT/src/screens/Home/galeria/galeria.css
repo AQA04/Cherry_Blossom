@@ -14,10 +14,9 @@
     justify-content: center;
     align-content: center;
     text-align: center;
-    font-size: 250%;
-    font-family: title, serif;
-    color: rgb(38, 35, 54);
-    font-style: italic;
+    font-size: 285%;
+    font-family: title;
+    color: rgb(0, 0, 0);
 }
 
 .galeria {

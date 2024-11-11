@@ -3,6 +3,10 @@ import React from 'react';
 import useHistorial from './Historial_Val'; // Importamos el hook para consumir la API
 import './Historial.css';
 
+import Menu from '../../menu/Menu';
+import Footer from '../../footer/Footer';
+
+
 const Historial = () => {
     const { historial, error, loading } = useHistorial(); // Usamos el hook para obtener los datos
 
@@ -15,25 +19,30 @@ const Historial = () => {
     }
 
     return (
+         <>
+         <Menu/>
         <div>
+           
             <h1>Historial de Usuarios</h1>
             {historial.length > 0 ? (
-                <ul>
+                <box>
                     {historial.map((item, index) => (
-                        <li key={index}>
+                        <lista key={index}>
                             <p>ID Usuario: {item.Id_Usuario}</p>
                             <p>ID Pago: {item.Id_Pago}</p>
                             <p>Fecha Pedido: {item.FechaPedido}</p>
                             <p>ID Producto: {item.Id_Producto}</p>
                             <p>Cantidad: {item.Cantidad}</p>
                             <p>Subtotal: {item.Subtotal}</p>
-                        </li>
+                        </lista>
                     ))}
-                </ul>
+                </box>
             ) : (
-                <p>No hay historial disponible.</p> // Si no hay datos
+                <mensaje>No hay historial disponible.</mensaje> // Si no hay datos
             )}
         </div>
+        <Footer/>
+         </>
     );
 };
 

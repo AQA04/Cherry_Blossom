@@ -1,44 +1,54 @@
 /* Historial.css */
+@font-face {
+    font-family: 'title'; 
+    src: url('/src/components/fonts/title.TTF');
+  }
 
+  @font-face {
+    font-family: 'text'; 
+    src: url('/src/components/fonts/text.TTF');
+  }
 /* Estilos generales para la página del historial */
 h1 {
     text-align: center;
-    color: #2c3e50;
-    font-size: 2rem;
+    color:black;
+    font-size: 250%;
     margin-top: 20px;
+    font-family:title, serif;
 }
 
 /* Contenedor principal del historial */
-ul {
+box {
     list-style-type: none; /* Elimina los puntos de la lista */
+    font-family:text, serif;
     padding: 0;
-    max-width: 1200px;
-    margin: 0 auto; /* Centrar la lista */
+    max-width: 95%;
+    margin: 2% auto; /* Centrar la lista */
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
 /* Estilos para cada elemento de la lista */
-li {
-    background-color: #ecf0f1;
+lista {
+    background-color: #f8f9fc;
     border-radius: 8px;
     padding: 20px;
-    width: 300px;
+    width: 28%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
 }
 
-li:hover {
+lista:hover {
     transform: scale(1.05);
 }
 
 /* Estilo de los párrafos dentro de cada elemento */
-li p {
+lista mensaje {
     margin: 8px 0;
     font-size: 1rem;
-    color: #34495e;
+    color: #000000;
 }
 
 /* Estilo para el error */
@@ -49,6 +59,6 @@ li p {
 }
 
 /* Estilo de carga */
-p.loading {
+mensaje.loading {
     text-align: center;
-    font
+}

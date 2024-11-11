@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Productos.css'
+import './ProductosHome.css'
 import estuche from '/src/components/estucheEjemplo.jpg'
 import lienzo from '/src/components/lienzoEjemplo.jpg'
 import acrilico from '/src/components/acrilicoEjemplo.jpg'
@@ -41,7 +41,7 @@ export default function Productos() {
             <div id='cartas'>
               <img src={acrilico} alt='acrilicoEjemlpo' className='imagenesCartas'></img>
               <div className='descripcion'>
-                <p>Acrilico</p>
+                <p>acrílico</p>
                 <p>Exhibe tus recuerdos en placas de acrílico de alta calidad, con impresión vibrante que resalta cualquier foto o diseño.</p>
               </div>
               <button className='botonCartas'onClick={handleButtonClick}>Más Info</button>
@@ -53,6 +53,7 @@ export default function Productos() {
                 <p>Digital</p>
                 <p>Obtén ilustraciones digitales personalizadas, hechas a medida según tus ideas o fotos, perfectas para regalos únicos</p>
               </div>
+
               <button className='botonCartas'onClick={handleButtonClick}>Más Info</button>
 
             </div>

@@ -62,7 +62,6 @@
 .ingresar {
     height: 50px;
     width: 30%;
-
     background-color: #f0f0f0;
     color: black;
     border-radius: 5px;
@@ -122,3 +121,4 @@
     size: 100%;
     color: black;
 }
+

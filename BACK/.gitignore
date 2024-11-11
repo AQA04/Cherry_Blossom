@@ -1,11 +1,9 @@
-
+<<<<<<< HEAD
 # Ignorar la carpeta node_modules
-./node_modules
-node_modules
-
+=======
 # Dependency directories
+>>>>>>> 0e82cc41f61fa18dfe1303beaf406efafe5391ad
 node_modules/
-
 
 # Ignorar archivos de log
 *.log
@@ -20,3 +18,12 @@ Thumbs.db
 # Ignorar carpetas de compilación
 dist/
 build/
+
+# Ignorar archivos de configuración de IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignorar archivos de prueba
+coverage/

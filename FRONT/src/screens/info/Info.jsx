@@ -60,6 +60,11 @@ const productos = [
 ];
 
 const Info = () => {
+  
+  const clickBusquedaProductos = () => {
+    window.location.href = './Productos'
+  }
+
   return (
     <div>
       <div>
@@ -73,6 +78,10 @@ const Info = () => {
             <div className="contenido">
               <h2 className="titulo">{producto.titulo}</h2>
               <p className="texto">{producto.texto}</p>
+
+              <div id='boxBoton'>
+              <button type='button' className='botonProductosBusqueda' onClick={clickBusquedaProductos}>Ver más productos</button>
+              </div>
             </div>
           </div>
         ))}

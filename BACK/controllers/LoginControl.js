@@ -1,24 +1,23 @@
-// controllers/LoginControl.js
+
 import createConnection from '../DB/database.js';
 
-async function LoginControl(Correo, userPsw_ctl) {
+async function LoginControl() {
     let connection;
 
     try {
         connection = await createConnection();
 
-        // Realizar la consulta a la base de datos para buscar el usuario
+       try {
         const [results] = await connection.query(
-            'SELECT * FROM Usuarios WHERE Correo = ? AND Contraseña = ?',
-            [Correo, userPsw_ctl] // Usar los parámetros para la consulta
-        );
+             'SELECT * FROM Usuarios'
+                );
+    
+            return results; // Devolver los resultados
+       } catch (error) {
+        res.status(500).send('No se encontraron usuarios');
+       }
 
-        return results; // Devolver los resultados
-
-    } catch (err) {
-        console.error('Error en la conexión o en la consulta:', err);
-        throw err; // Lanzar el error para que pueda ser manejado por el llamador
-
+    
     } finally {
         if (connection) {
             await connection.end();
