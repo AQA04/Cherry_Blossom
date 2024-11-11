@@ -23,7 +23,7 @@ app.use(express.json());
 
 app.set('port', config.app.port);
 
-// Define tus rutas aquí
+
 app.use('/api/Carrito', carritoRoutes);
 app.use('/api/Historial', historialRoutes);
 app.use('/api/Login', loginRoutes);
