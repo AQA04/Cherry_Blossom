@@ -27,7 +27,7 @@ const Productos = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <div>
         <Menu/>
       </div>
@@ -52,7 +52,7 @@ const Productos = () => {
       <div>
         <Footer/>
       </div>
-    </div>
+    </>
   );
 };
 
