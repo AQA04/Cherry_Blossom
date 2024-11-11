@@ -25,7 +25,7 @@ const Footer = () => {
             <div className='textoFooter'>
               <p className="tituloFooter">Productos</p>
               <p></p>
-              <a href="./info" className="linkFooter">Acrilicos</a> 
+              <a href="./info" className="linkFooter">acrílicos</a> 
               <p></p>
               <a href="./info" className="linkFooter">Digital</a>
               <p></p>
@@ -37,7 +37,7 @@ const Footer = () => {
 
 
             <div className='textoFooter'>
-            <a className="tituloFooter">Terminos y condiciones</a>
+            <a className="tituloFooter">Términos y condiciones</a>
               <p>Leer TyC</p> 
               <p>Preguntas Frecuentes</p> 
               <p>Español - Colombia</p> 
