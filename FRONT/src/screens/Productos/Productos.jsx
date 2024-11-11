@@ -42,6 +42,7 @@ const Productos = () => {
                 <h2 className="descripcionProductos">{producto.Descripcion}</h2>
                 <p className="precioProductos">Precio: {producto.Precio}</p>
 
+                <button className='botonProductos'onClick={null}>🛒</button>
               </div>
             ))
           ) : (

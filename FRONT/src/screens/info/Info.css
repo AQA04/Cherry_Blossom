@@ -18,7 +18,7 @@
   margin: 5px;
   width: 98%; 
   box-shadow: 0 0 5px #989797;
-  background-color: #e7e7e7;
+  background-color: #faf5f5;
 }
 
 .imagen {
@@ -49,4 +49,35 @@
   color: #000000;
   text-align:center;
   font-family: text, sans-serif;
+}
+
+#boxBoton {
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+
+.botonProductosBusqueda {
+  font-family: text, serif;
+  font-size: large;
+  height: 50px;
+  width: 30%;
+
+  background-color: #c9adf1;
+  color: black;
+  border-radius: 5px;
+  
+  margin: 10%;
+
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  border: none;
+}
+
+.botonProductosBusqueda:hover {
+  background-color: rgb(81, 72, 138);
+  color: white;
+  transition: 1s;
+  cursor: pointer;
 }
