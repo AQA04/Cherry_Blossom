@@ -2,25 +2,27 @@ import React, { useState } from 'react';
 import './Login.css';
 import iconoPerfil from '/src/components/iconoPerfil.jpg';
 import validacionLogin from './Login_Val';
+import { ToastContainer } from 'react-toastify'; // Importar ToastContainer
+import 'react-toastify/dist/ReactToastify.css'; // Importar estilos
 
 const LoginComponent = () => {
-    const [username, setUsername] = useState("");
-    const [userpsw, setUserpsw] = useState("");
+    const [userMail, setUserMail] = useState(""); // Cambié 'setuserMail' a 'setUser Mail'
+    const [userPsw, setUserPsw] = useState(""); // Cambié 'userpsw' a 'userPsw'
     const [errorMessage, setErrorMessage] = useState(""); // Agregar estado para el mensaje de error
 
     const handleButtonIngresar = async (event) => {
         event.preventDefault();
-        console.log("Usuario:", username);
-        console.log("Contraseña:", userpsw);
+        console.log("Correo:", userMail);
+        console.log("Contraseña:", userPsw); // Cambié 'userpsw' a 'userPsw'
 
         // Pasar setErrorMessage a la función de validación
-        await validacionLogin(username, userpsw, setErrorMessage);
+        await validacionLogin(userMail, userPsw, setErrorMessage); // Cambié 'userpsw' a 'userPsw'
     };
 
     const handleButtonCancelar = () => {
-        setUsername("");
-        setUserpsw("");
-        setErrorMessage(""); // Limpiar el mensaje de error al cancelar
+        setUserMail(""); // Cambié 'setuserMail' a 'setUser Mail'
+        setUserPsw(""); // Cambié 'setUser psw' a 'setUser Psw'
+        window.location.href = './Home';
     };
 
     return (
@@ -32,10 +34,10 @@ const LoginComponent = () => {
                     <input
                         type='text'
                         id='username'
-                        placeholder='Usuario'
+                        placeholder='Correo'
                         className='inputs'
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
+                        value={userMail}
+                        onChange={(e) => setUserMail(e.target.value)} // Cambié 'setuserMail' a 'setUser Mail'
                         required
                     />
                     <input
@@ -43,8 +45,8 @@ const LoginComponent = () => {
                         id='password'
                         placeholder='Contraseña'
                         className='inputs'
-                        value={userpsw}
-                        onChange={(e) => setUserpsw(e.target.value)}
+                        value={userPsw} // Cambié 'userpsw' a 'userPsw'
+                        onChange={(e) => setUserPsw(e.target.value)} // Cambié 'setUser psw' a 'setUser Psw'
                         required
                     />
                     {errorMessage && <div className="error-message">{errorMessage}</div>} {/* Mostrar mensaje de error */}
@@ -55,6 +57,7 @@ const LoginComponent = () => {
                     <button type="submit" className='ingresar'>Ingresar</button>
                 </form>
             </div>
+            <ToastContainer /> {/* Asegúrate de incluir el ToastContainer aquí */}
         </div>
     );
 };
