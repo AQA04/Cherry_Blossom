@@ -1,4 +1,4 @@
-// routes/loginRoutes.js
+
 import express from 'express';
 import LoginControl from '../controllers/LoginControl.js'; // Importar la función del controlador
 
