@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Home />} /> {/* Redirige la ruta raíz a /Home */}
         <Route path="/Home" element={<Home />} /> {/* Ruta para Home */}
         <Route path="/Info" element={<Info />} />
-        <Route path="/Login" element={<Login />} />
+       <Route path="/Login" element={<Login />} />
         <Route path="/Productos" element={<Productos />} />
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/registro" element={<Registro />} />

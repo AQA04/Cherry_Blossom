@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Ignorar la carpeta node_modules
+=======
+# Dependency directories
+>>>>>>> 0e82cc41f61fa18dfe1303beaf406efafe5391ad
 node_modules/
 
 # Ignorar archivos de log

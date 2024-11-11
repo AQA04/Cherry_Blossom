@@ -4,7 +4,7 @@ import Menu from '/src/menu/Menu';
 import AboutUs from './aboutUs/AboutUs';
 import Carrusel from './carrusel/Carrusel';
 import Galeria from './galeria/Galeria';
-import Productos from './productos/Productos';
+import ProductosHome from './productosHome/ProductosHome';
 import Footer from '/src/footer/Footer';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
     <>
     <Menu />
     <Carrusel />
-    <Productos />
+    <ProductosHome />
     <AboutUs />
     <Galeria />
     <Footer />
