@@ -1,10 +1,10 @@
 
 import React from 'react';
-import useCarrito from './Carrito_Val'; // Asegúrate de que la ruta sea correcta
+import useCarrito from './Carrito_Val';
 import './carrito.css';
 
 const Carrito = () => {
-    const { Carrito, error, loading, eliminarProducto } = useCarrito(); // Ahora incluye eliminarProducto
+    const { Carrito, error, loading, eliminarProducto } = useCarrito(); 
 
 
     if (loading) {
