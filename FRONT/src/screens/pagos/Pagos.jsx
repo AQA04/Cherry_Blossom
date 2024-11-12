@@ -23,7 +23,7 @@ const Pagos = () => {
   useEffect(() => {
     if (success) {
       const timer = setTimeout(() => {
-        window.location.href = './Home'; // Redirige a la página de inicio
+        window.location.href = './Home'; // Redirige al inicio
       }, 5000);
 
       return () => clearTimeout(timer); 
