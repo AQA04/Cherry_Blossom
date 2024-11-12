@@ -18,59 +18,59 @@
     font-family: title, serif;
     color: rgb(38, 35, 54);
     font-style: italic;
-    margin: 20px 0; /* Espacio alrededor del título */
+    margin: 20px 0;
 }
 
 #expoProductos {
-    height: auto; /* Cambiado a auto para adaptarse al contenido */
+    height: auto;
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Permite que las cartas se ajusten en varias filas */
-    align-content: flex-start; /* Alinea el contenido al inicio */
+    flex-wrap: wrap;
+    align-content: flex-start;
     justify-content: space-around;
     margin-bottom: 5%;
 }
 
 .cartasProductos {
-    height: auto; /* Cambiado a auto para adaptarse al contenido */
+    height: auto;
     width: 20%;
     font-family: text, serif;
     color: black;
-    border: 1px solid black; /* Añadido para definir el borde */
+    border: 1px solid black;
     box-shadow: 0 0 10px #989797;
     border-radius: 4px;
     text-align: center;
     margin: 10px;
-    padding: 10px; /* Añadido para espacio interno */
-    background-color: white; /* Añadido para un fondo blanco */
+    padding: 10px;
+    background-color: white;
 }
 
 .descripcionProductos {
-    height: auto; /* Cambiado a auto para adaptarse al contenido */
+    height: auto;
     width: 100%;
     font-size: 95%;
-    margin: 5px 0; /* Añadido para espacio alrededor de la descripción */
+    margin: 5px 0;
 }
 
 .precioProductos {
-    font-size: 90%; /* Tamaño de fuente para el precio */
-    color: rgb(100, 100, 100); /* Color gris para el precio */
+    font-size: 90%;
+    color: rgb(100, 100, 100);
 }
 
 .botonProductos {
-    height: auto; /* Ajustado para un tamaño fijo */
+    height: auto;
     width: 30%; 
     background-color: rgb(239, 239, 241);
     font-size: 200%;
     color: white;
     border-radius: 3px;
     margin-bottom: 2%;
-    border: none; /* Eliminado el borde por defecto */
-    cursor: pointer; /* Cambiado para indicar que es clickeable */
+    border: none;
+    cursor: pointer;
 }
 
 .botonProductos:hover {
     background-color: rgb(221, 221, 238);
     color: black;
-    transition: background-color 0.3s; /* Transición más suave */
+    transition: background-color 0.3s;
 }

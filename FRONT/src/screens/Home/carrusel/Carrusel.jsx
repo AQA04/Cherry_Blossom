@@ -13,7 +13,7 @@ const imagenes = [
   { id: 3, src: banner3, alt: 'Banner 3' },
   { id: 4, src: banner4, alt: 'Banner 4' },
 ];
-
+//configuraciones de tamaño
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -25,6 +25,7 @@ const responsive = {
   },
 };
 
+//componentes
 const Carrusel = () => {
   return (
     <Carousel
@@ -39,12 +40,12 @@ const Carrusel = () => {
       keyBoardControl={true}
       customTransition="transform 300ms ease-in-out"
       transitionDuration={300}
-      containerClass="carousel-container" // Corregido
-      dotListClass="custom-dot-list-style" // Corregido
+      containerClass="carousel-container" 
+      dotListClass="custom-dot-list-style" 
     >
       {imagenes.map((imagen) => (
         <div key={imagen.id}>
-          <img src={imagen.src} alt={imagen.alt} /> {/* Usar un texto alternativo más descriptivo */}
+          <img src={imagen.src} alt={imagen.alt} />
         </div>
       ))}
     </Carousel>

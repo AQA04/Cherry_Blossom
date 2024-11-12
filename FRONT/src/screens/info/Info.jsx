@@ -19,7 +19,6 @@ const productos = [
       <p>Sencillo: Elegante y minimalista</p>
       <p>Blanco y Negro: Clásico y sofisticado</p>
       <p>Detalle Completo: Riqueza de detalles y matices.</p>
-      <p>Nota: Cada opción de diseño tiene un costo diferente.</p>
     </div>
   },
 
@@ -31,7 +30,6 @@ const productos = [
   <p>Todos los dibujos se entregan en formato JPG y con el mismo tamaño.</p>
   <p>Podrás seleccionar el estilo que más te guste como: </p>
   <p>sombra, lineart, blanco y negro, detallado y realismo.</p>
-  <p>Nota: Cada opción de diseño tiene un costo diferente.</p>
   </div>
 },
 {
@@ -42,7 +40,6 @@ const productos = [
     <p>Tenemos varios modelos diferentes que se pueden adaptar a lo que buscas.</p>
     <p>Podrás escoger el diseño que más te guste, tenemos pinturas sencillas, blanco y negro, lineart o detalladas</p>
     <p>podrás personalizarlo como gustes.</p>
-    <p>Nota: Cada opción de diseño tiene un costo diferente.</p>
   </div>
 },
 {
@@ -54,7 +51,6 @@ const productos = [
     <p>Tenemos diferentes tamaños para que te puedas adaptar al que más te gusta.</p>
     <p>Los diseños varian según lo que buscas; sencillo, blanco y negro, lineart, detallado.</p>
     <p>Puedes seleccionar el estilo que más te guste.</p>
-    <p>Nota: Cada opción de diseño tiene un costo diferente.</p>
     </div>
 },
 ];
