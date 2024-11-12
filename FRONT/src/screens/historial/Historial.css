@@ -1,4 +1,4 @@
-/* Historial.css */
+
 @font-face {
     font-family: 'title'; 
     src: url('/src/components/fonts/title.TTF');
@@ -8,7 +8,7 @@
     font-family: 'text'; 
     src: url('/src/components/fonts/text.TTF');
   }
-/* Estilos generales para la página del historial */
+
 h1 {
     text-align: center;
     color:black;
@@ -17,20 +17,19 @@ h1 {
     font-family:title, serif;
 }
 
-/* Contenedor principal del historial */
+
 box {
-    list-style-type: none; /* Elimina los puntos de la lista */
+    list-style-type: none; 
     font-family:text, serif;
     padding: 0;
     max-width: 95%;
-    margin: 2% auto; /* Centrar la lista */
+    margin: 2% auto; 
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
 }
 
-/* Estilos para cada elemento de la lista */
 lista {
     background-color: #f8f9fc;
     border-radius: 8px;
@@ -44,21 +43,19 @@ lista:hover {
     transform: scale(1.05);
 }
 
-/* Estilo de los párrafos dentro de cada elemento */
 lista mensaje {
     margin: 8px 0;
     font-size: 1rem;
     color: #000000;
 }
 
-/* Estilo para el error */
+
 .error {
     color: #e74c3c;
     text-align: center;
     font-size: 1.2rem;
 }
 
-/* Estilo de carga */
 mensaje.loading {
     text-align: center;
 }
