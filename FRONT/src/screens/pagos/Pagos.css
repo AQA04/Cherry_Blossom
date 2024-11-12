@@ -3,13 +3,22 @@
     src: url('/src/components/fonts/text.TTF');
   }
 
+  body {
+    margin: 0; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #eae8fd; 
+}
+
 .payment-form {
     font-family: text;
-    width: 300px;
+    width: 400px;
     margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 30px;
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
     background-color: #f9f9f9;
   }
   
@@ -18,17 +27,17 @@
   }
   
   .payment-form div {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
   }
   
   .payment-form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
   
   .payment-form input {
     width: 100%;
-    padding: 8px;
+    padding: 9px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }

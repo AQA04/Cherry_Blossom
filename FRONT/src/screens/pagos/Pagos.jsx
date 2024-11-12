@@ -18,18 +18,17 @@ const Pagos = () => {
     // Simulación de envío de datos
     setSuccess('Pago procesado con éxito.');
     setError('');
-    // Aquí podrías agregar lógica para enviar los datos a un servidor
   };
 
   useEffect(() => {
     if (success) {
       const timer = setTimeout(() => {
         window.location.href = './Home'; // Redirige a la página de inicio
-      }, 5000); // 5000 ms = 5 segundos
+      }, 5000);
 
-      return () => clearTimeout(timer); // Limpia el temporizador si el componente se desmonta
+      return () => clearTimeout(timer); 
     }
-  }, [success]); // Se ejecuta cuando 'success' cambia
+  }, [success]);
 
   return (
     <div className="payment-form">
