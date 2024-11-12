@@ -23,8 +23,8 @@ const Carrito = ({ eliminarProducto }) => {
                     <li>No hay productos en el carrito.</li>
                 ) : (
                     Carrito.map((producto) => (
-                        <li key={producto.id}>
-                            {producto.nombre} - Cantidad: {producto.cantidad} - Precio: ${producto.precio}
+                        <li key={producto.nombre}>
+                            {producto.Tipo_Producto} - Precio: ${producto.Precio}
                             <button onClick={() => eliminarProducto(producto)}>Eliminar</button>
                         </li>
                     ))

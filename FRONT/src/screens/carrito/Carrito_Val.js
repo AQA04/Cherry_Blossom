@@ -2,10 +2,9 @@
 import { useEffect, useState } from 'react';
 
 const useCarrito = () => {
-    const [Carrito, setCarrito] = useState([]);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true); // Estado para saber si los datos están siendo cargados
-
+    const [Carrito, setCarrito] = useState([]); // Estado para almacenar los productos del carrito
+    const [error, setError] = useState(null); // Estado para manejar errores
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         const fetchCarrito = async () => {
             try {

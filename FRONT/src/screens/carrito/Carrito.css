@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'title'; 
+  src: url('/src/components/fonts/title.TTF');
+}
+
+@font-face {
+  font-family: 'text'; 
+  src: url('/src/components/fonts/text.TTF');
+}
+
 .carrito-popover {
   position: absolute; /* Para que el popover se posicione correctamente */
   top: 50px; /* Ajusta según sea necesario */
@@ -14,7 +24,7 @@
 .carrito-popover h2 {
   margin: 0 0 10px; /* Margen inferior */
   font-size: 20px; /* Tamaño de fuente */
-  color: #333; /* Color del texto */
+  color: #000000; /* Color del texto */
 }
 
 .carrito-popover ul {
@@ -28,7 +38,10 @@
   justify-content: space-between; /* Espacio entre el texto y el botón */
   align-items: center; /* Centrar verticalmente */
   padding: 10px 0; /* Espaciado vertical */
-  border-bottom: 1px solid #eee; /* Línea divisoria */
+  border-bottom: 1px solid #000000; /* Línea divisoria */
+  font-family: text, serif;
+  color: #000000;
+font-size: 90%;
 }
 
 .carrito-popover li:last-child {
@@ -37,7 +50,7 @@
 
 .carrito-popover button {
   background-color: #ff4d4d; /* Color de fondo del botón */
-  color: white; /* Color del texto del botón */
+  color: rgb(255, 255, 255); /* Color del texto del botón */
   border: none; /* Sin borde */
   border-radius: 5px; /* Bordes redondeados */
   padding: 5px 10px; /* Espaciado interno */
