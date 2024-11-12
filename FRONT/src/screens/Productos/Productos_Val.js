@@ -1,5 +1,4 @@
 
-
 const validacionProductos = async () => {
     try {
         const urls = [
@@ -16,15 +15,15 @@ const validacionProductos = async () => {
                 throw new Error(`Error en la respuesta: ${response.status}`);
             }
             const data = await response.json();
-            console.log("Datos de la API:", data); // Agrega esta línea para ver los datos
-            return data; // Asegúrate de que 'data' sea un array de productos
+            console.log("Datos de la API:", data); // ver los datos
+            return data;
         }));
 
         return productosOk.flat(); 
 
     } catch (error) {
         console.error("Error al validar productos:", error);
-        return []; // Devuelve un array vacío en caso de error
+        return [];
     }
 }
 
