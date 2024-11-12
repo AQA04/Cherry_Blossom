@@ -1,12 +1,18 @@
 import React from 'react'
+import { useState } from 'react'
 import './registro.css'
 import iconoRegistro from '/src/Components/iconoPerfil.png'
 
 
 const Registro = () => {
+    const [nombreReg, setNombreReg] = useState("");
+    const [apellidoReg, setApellidoReg] = useState("");
+    const [correo, setCorreo] = useState("");
+    const [contrasenaReg, setContrasenaReg] = useState("");
 
     const handleButtonIngresar = () => {
-        window.location.href = './';
+
+        
       };
     
       const handleButtonCancelar = () => {
@@ -27,10 +33,6 @@ const Registro = () => {
             <form>
                 <input type='text' id='nombreReg' placeholder='Nombre' className='inputsReg' />
                 <input type='text' id='apellidoReg' placeholder='Apellido' className='inputsReg' />
-
- 
-
-
 
                 <input type='email' id='correo' placeholder='Correo' className='inputsReg' />
                 <input type='password' id='contrasenaReg' placeholder='Contraseña' className='inputsReg' />

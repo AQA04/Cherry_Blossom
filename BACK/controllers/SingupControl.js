@@ -23,7 +23,7 @@ async function singupUsuario(userNombre, userApellido, userTelefono, userDirecci
         );
 
         // Si ya existe un usuario con el mismo correo
-        if (existingUser .length > 0) {
+        if (existingUser.length > 0) {
             return console.log( 'Error, usuario ya existente')
         } else {
             // Consulta para insertar un nuevo usuario
