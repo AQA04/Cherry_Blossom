@@ -1,6 +1,6 @@
 import createConnection from '../DB/database.js';
 
-async function singupUsuario(userNombre, userApellido, userTelefono, userDireccion, userCorreo, userContraseña) {
+async function signupUsuario(userNombre, userApellido, userTelefono, userDireccion, userCorreo, userContraseña) {
     let connection;
 
     const userData = {
@@ -9,7 +9,7 @@ async function singupUsuario(userNombre, userApellido, userTelefono, userDirecci
         telefono: userTelefono,
         direccion: userDireccion,
         correo: userCorreo,
-        contraseña: userContraseña,
+        contraseña: userContraseña
     };
 
     try {
@@ -23,8 +23,8 @@ async function singupUsuario(userNombre, userApellido, userTelefono, userDirecci
         );
 
         // Si ya existe un usuario con el mismo correo
-        if (existingUser.length > 0) {
-            return console.log( 'Error, usuario ya existente')
+        if (existingUser .length > 0) {
+            return { success: false, message: 'Error, usuario ya existente' };
         } else {
             // Consulta para insertar un nuevo usuario
             const query = `
@@ -43,13 +43,12 @@ async function singupUsuario(userNombre, userApellido, userTelefono, userDirecci
                 'activo' // Estado por defecto
             ]);
 
-            
-            return console.log(`Usuario creado con ID: ${result.insertId}, ${userData.nombre}`);
+            return { success: true, message: `Usuario creado con ID: ${result.insertId}`, userId: result.insertId };
         }
 
-    } catch (err) {
-        console.error('Error al crear el usuario:', err);
-        throw err; // Lanzar el error para que pueda ser manejado por el llamador
+    } catch (error) {
+        console.error('Error en la creación de usuario:', error);
+        return { success: false, message: 'Error al crear usuario' };
     } finally {
         // Cerrar la conexión si está definida
         if (connection) {
@@ -59,4 +58,4 @@ async function singupUsuario(userNombre, userApellido, userTelefono, userDirecci
 }
 
 // Exportar la función como exportación por defecto
-export default singupUsuario;
+export default signupUsuario;
