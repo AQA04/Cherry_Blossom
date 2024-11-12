@@ -1,3 +1,4 @@
+
 import React from 'react';
 import useCarrito from './Carrito_Val'; // Asegúrate de que la ruta sea correcta
 import './carrito.css';
@@ -5,16 +6,17 @@ import './carrito.css';
 const Carrito = () => {
     const { Carrito, error, loading, eliminarProducto } = useCarrito(); // Ahora incluye eliminarProducto
 
+
     if (loading) {
-        return <div>Cargando...</div>; // Mostrar un mensaje de carga
+        return <div>Cargando...</div>; 
     }
 
     if (error) {
-        return <div>Error: {error}</div>; // Mostrar un mensaje de error
+        return <div>Error: {error}</div>;
     }
 
     return (
-        <div className="carrito-popover">
+        <div className="carrito-popover">{/*Contenido del carrito*/}
             <h2>Carrito de Compras</h2>
             <ul>
                 {Carrito.length === 0 ? (

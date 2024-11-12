@@ -1,4 +1,4 @@
-import { toast } from 'react-toastify'; // Asegúrate de que esta línea esté presente
+import { toast } from 'react-toastify';
 
 const validacionLogin = async (userMail, userPsw, setErrorMessage) => {
     try {
@@ -21,20 +21,20 @@ const validacionLogin = async (userMail, userPsw, setErrorMessage) => {
             for (const usuario of usuarios) {
                 if (usuario.Correo === userMail) {
                     userFound = true;
-                    toast.success("¡Bienvenido!"); // Mostrar mensaje de éxito
+                    toast.success("¡Bienvenido!"); 
                     
-                    // Esperar 5 segundos antes de redirigir
+                    // Espera 5 segundos antes de redirigir a /Home
                     setTimeout(() => {
-                        window.location.href = './Home'; // Redirigir después de 5 segundos
+                        window.location.href = './Home';
                     }, 5000);
                     
-                    break; // Salir del bucle una vez que se encuentra el usuario
+                    break;
                 }
             }
         }
 
         if (!userFound) {
-            toast.error("Usuario no encontrado"); // Mostrar mensaje de error
+            toast.error("Usuario no encontrado");
         }
 
     } catch (error) {
