@@ -9,7 +9,7 @@ async function carritoControl() {
 
        try {
         const [results] = await connection.query(
-             'SELECT * FROM Carrito'
+             'SELECT * FROM Productos'
                 );
     
             return results; // Devolver los resultados
