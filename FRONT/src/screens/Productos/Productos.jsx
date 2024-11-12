@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import validacionProductos from './Productos_Val'; // Asegúrate de que la ruta sea correcta
-import './Productos.css'; // Asegúrate de importar tu archivo CSS
+import validacionProductos from './Productos_Val'; 
+import './Productos.css'; 
 
 import Menu from '../../menu/Menu';
 import Footer from '../../footer/Footer';
 
+//componente donde almaceno mi lista de productos
 const Productos = () => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  //Carga los productos que estoy pidiendo
   const cargarProductos = async () => {
     try {
       const productosObtenidos = await validacionProductos();
@@ -22,9 +24,10 @@ const Productos = () => {
     }
   };
 
+  //hook
   useEffect(() => {
     cargarProductos();
-  }, []);
+  }, []); //para que se ejecute una sola vez 
 
   return (
     <>

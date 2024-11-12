@@ -1,22 +1,22 @@
-// Carrito.jsx
+
 import React from 'react';
 import PropTypes from 'prop-types';
-import useCarrito from './Carrito_Val'; // Asegúrate de que la ruta sea correcta
+import useCarrito from './Carrito_Val';
 import './carrito.css';
 
 const Carrito = ({ eliminarProducto }) => {
-    const { Carrito, error, loading } = useCarrito(); // Usar el hook para obtener los datos del carrito
+    const { Carrito, error, loading } = useCarrito(); //hook carrito
 
     if (loading) {
-        return <div>Cargando...</div>; // Mostrar un mensaje de carga
+        return <div>Cargando...</div>; 
     }
 
     if (error) {
-        return <div>Error: {error}</div>; // Mostrar un mensaje de error
+        return <div>Error: {error}</div>;
     }
 
     return (
-        <div className="carrito-popover">
+        <div className="carrito-popover">{/*Contenido del carrito*/}
             <h2>Carrito de Compras</h2>
             <ul>
                 {Carrito.length === 0 ? (

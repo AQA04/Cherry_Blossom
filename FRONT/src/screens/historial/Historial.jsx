@@ -1,6 +1,5 @@
-// Historial.jsx
 import React from 'react';
-import useHistorial from './Historial_Val'; // Importamos el hook para consumir la API
+import useHistorial from './Historial_Val';
 import './Historial.css';
 
 import Menu from '../../menu/Menu';
@@ -8,14 +7,14 @@ import Footer from '../../footer/Footer';
 
 
 const Historial = () => {
-    const { historial, error, loading } = useHistorial(); // Usamos el hook para obtener los datos
+    const { historial, error, loading } = useHistorial(); //hook para obtener datos
 
     if (loading) {
-        return <p>Cargando...</p>; // Mostrar cuando los datos se están cargando
+        return <p>Cargando...</p>; 
     }
 
     if (error) {
-        return <p className="error">{error}</p>; // Mostrar el error si ocurre
+        return <p className="error">{error}</p>; 
     }
 
     return (
@@ -38,7 +37,7 @@ const Historial = () => {
                     ))}
                 </box>
             ) : (
-                <mensaje>No hay historial disponible.</mensaje> // Si no hay datos
+                <mensaje>No hay historial disponible.</mensaje> 
             )}
         </div>
         <Footer/>

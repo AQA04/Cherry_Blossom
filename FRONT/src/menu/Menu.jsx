@@ -15,15 +15,15 @@ import Carrito from '../screens/carrito/Carrito';
 
 const Menu = () => {
   const [isPopoverVisible, setPopoverVisible] = useState(false);
-  const [productos, setProductos] = useState([]); // Estado para los productos en el carrito
-  const popoverRef = useRef(null); // Referencia para el popover
+  const [productos, setProductos] = useState([]); // Estado carrito
+  const popoverRef = useRef(null); //popover
 
   const togglePopover = () => {
     setPopoverVisible(!isPopoverVisible);
   };
 
   const eliminarProducto = (producto) => {
-    // Lógica para eliminar el producto del carrito
+    // elimina el producto
     setProductos((prevProductos) => prevProductos.filter((p) => p.id !== producto.id));
     console.log(`Eliminar producto: ${producto.nombre}`);
   };
@@ -34,22 +34,22 @@ const Menu = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => {//maneja el click fuera del popover
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
-  const clickPerfil = () => {
+  const clickPerfil = () => {//redirege a la pagina login
     window.location.href = './login';
   };
 
-  const clickHistorial = () => {
+  const clickHistorial = () => {//redirege a la pagina historial
     window.location.href = './Historial';
   };
 
-  const clickLogo = () => {
+  const clickLogo = () => {//redirege a la pagina home
     window.location.href = './Home';
   };
 
@@ -58,7 +58,7 @@ const Menu = () => {
       <div id="menuPrincipal">
         <img src={logo} onClick={clickLogo} style={{ cursor: "pointer" }} alt="logoMenu" id="logoMenu" />
         
-
+        {/* productos */}
         <div id="itemEicono">
           <img src={iconoAcrilico} className="iconosMenu" alt="Acrilico" />
           <a href="./Productos" className='linkMenu'>Acrílico</a>
@@ -78,7 +78,7 @@ const Menu = () => {
           <img src={iconoLienzo} className="iconosMenu" alt="Lienzo" />
           <a href="./Productos" className='linkMenu'>Lienzo</a>
         </div>
-
+        {/* Iconos */}
         <div>
           <img src={iconoHistorial} onClick={clickHistorial} style={{ cursor: "pointer" }} className="iconosGrandes" alt="Perfil" />
         </div>
