@@ -52,6 +52,9 @@ const Menu = () => {
   const clickLogo = () => {
     window.location.href = './Home';
   };
+  const clickPagar = () => {
+    window.location.href = './Pagos';
+  };
 
   return (
     <> 
@@ -88,17 +91,20 @@ const Menu = () => {
         </div>
 
         <div>
-          <img 
-            src={iconoCarrito} 
-            onClick={togglePopover} 
-            style={{ cursor: "pointer", width: "30px", height: "30px" }} // Ajusta el tamaño según sea necesario
-            alt="Carrito" 
-          />
-          {isPopoverVisible && (
-            <div className="popover" ref={popoverRef}>
-              <Carrito productos={productos} eliminarProducto={eliminarProducto} />
-            </div>
-          )}
+            <img 
+                src={iconoCarrito} 
+                onClick={togglePopover} 
+                style={{ cursor: "pointer", width: "30px", height: "30px" }} 
+                alt="Carrito" 
+            />
+            {isPopoverVisible && (
+                <div className="popover" ref={popoverRef}>
+                    <Carrito productos={productos} eliminarProducto={eliminarProducto} />
+                    <div>
+                        <button type="button" onClick={clickPagar} className='pagar'>Pagar</button>
+                    </div>
+                </div>
+            )}
         </div>
       </div>
     </>

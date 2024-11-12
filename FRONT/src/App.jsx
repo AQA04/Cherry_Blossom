@@ -11,6 +11,7 @@ import Productos from './screens/Productos/Productos';
 import Carrito from './screens/carrito/Carrito';
 import Registro from './screens/registro/Registro';
 import Historial from './screens/historial/Historial'
+import Pagos from './screens/pagos/Pagos'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/registro" element={<Registro />} />
         <Route path="/Historial" element={<Historial />} />
+        <Route path="/Pagos" element={<Pagos />} />
       </Routes>
     </BrowserRouter>
   );
