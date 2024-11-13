@@ -3,14 +3,6 @@
     src: url('/src/components/fonts/text.TTF');
   }
 
-  body {
-    margin: 0; 
-    height: 100vh; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    background-color: #eae8fd; 
-}
 
 .payment-form {
     font-family: text;
