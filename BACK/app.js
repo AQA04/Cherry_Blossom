@@ -1,5 +1,10 @@
+//App.js
+
+//Importacion de las librerias que nos sacaron canas
 import cors from 'cors';
 import express from 'express';
+
+//Importacion de todas las rutas creadas con anterioridad
 import config from './config.js';
 import carritoRoutes from './routes/carritoRoutes.js';
 import historialRoutes from './routes/historialRoutes.js';
@@ -7,6 +12,7 @@ import loginRoutes from './routes/loginRoutes.js';
 import productosRoutes from './routes/productosRoutes.js';
 import singupRoutes from './routes/singupRoutes.js';
 
+//Habilitacion del express
 const app = express();
 
 // Configuración de CORS
@@ -24,7 +30,7 @@ app.use(express.json());
 app.set('port', config.app.port);
 
 
-// Define tus rutas aquí con CORS aplicado a cada una
+// Define las rutas con CORS, una por una
 app.use('/api/Carrito', cors(corsOptions), carritoRoutes);
 app.use('/api/Historial', cors(corsOptions), historialRoutes);
 app.use('/api/Login', cors(corsOptions), loginRoutes);
@@ -32,8 +38,10 @@ app.use('/api/Productos', cors(corsOptions), productosRoutes);
 app.use('/api/Singup', cors(corsOptions), singupRoutes);
 
 
+//Deja el puerto principal con un mensaje de "No sea chismoso"
 app.get('/', (req, res) => {
-    res.send('¡Hola, mundo!');
+    res.send('No sea chismoso');
 });
 
+//Exportamos
 export default app;

@@ -1,8 +1,12 @@
+//SingupContro.js
+//Sabemos que esta mal escrito, no es singup sino signup, pero nos dimos cuenta demasiado tarde
 import createConnection from '../DB/database.js';
 
+//Creamos la funcion con todos los aprametros de registro
 async function signupUsuario(userNombre, userApellido, userTelefono, userDireccion, userCorreo, userContraseña) {
     let connection;
 
+    //Almacenamos toda la info en una variable
     const userData = {
         nombre: userNombre,
         apellido: userApellido,
@@ -22,7 +26,7 @@ async function signupUsuario(userNombre, userApellido, userTelefono, userDirecci
             [userData.correo]
         );
 
-        // Si ya existe un usuario con el mismo correo
+        // Si ya hay un usuario con ese gmail, retornar error
         if (existingUser .length > 0) {
             return { success: false, message: 'Error, usuario ya existente' };
         } else {
@@ -48,9 +52,10 @@ async function signupUsuario(userNombre, userApellido, userTelefono, userDirecci
 
     } catch (error) {
         console.error('Error en la creación de usuario:', error);
+        //Error por si acaso
         return { success: false, message: 'Error al crear usuario' };
     } finally {
-        // Cerrar la conexión si está definida
+        //Siempre terminar la conexion
         if (connection) {
             await connection.end();
         }

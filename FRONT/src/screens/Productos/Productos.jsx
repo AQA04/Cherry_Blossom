@@ -1,5 +1,7 @@
+//productos.jsx
 import React, { useState, useEffect } from 'react';
 import validacionProductos from './Productos_Val'; 
+//Importamos estilos
 import './Productos.css'; 
 
 import Menu from '../../menu/Menu';
@@ -7,7 +9,7 @@ import Footer from '../../footer/Footer';
 
 //componente donde almaceno mi lista de productos
 const Productos = () => {
-  const [productos, setProductos] = useState([]);
+  const [productos, setProductos] = useState([]); //Almacena el tipo de producto
   const [loading, setLoading] = useState(true);
 
   //Carga los productos que estoy pidiendo
@@ -24,11 +26,11 @@ const Productos = () => {
     }
   };
 
-  //hook
+  
   useEffect(() => {
     cargarProductos();
-  }, []); //para que se ejecute una sola vez 
-
+  }, []); 
+  
   return (
     <>
       <div>

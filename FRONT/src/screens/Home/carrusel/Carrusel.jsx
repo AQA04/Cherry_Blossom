@@ -1,3 +1,4 @@
+//Carrusel.jsx
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import banner1 from '/src/components/banner1.png';
@@ -5,14 +6,17 @@ import banner2 from '/src/components/banner2.png';
 import banner3 from '/src/components/banner3.png';
 import banner4 from '/src/components/banner4.png';
 
+//Importamos estilos
 import './Carrusel.css';
 
+//Usamos las imagenes almacenadas
 const imagenes = [
   { id: 1, src: banner1, alt: 'Banner 1' },
   { id: 2, src: banner2, alt: 'Banner 2' },
   { id: 3, src: banner3, alt: 'Banner 3' },
   { id: 4, src: banner4, alt: 'Banner 4' },
 ];
+
 //configuraciones de tamaño
 const responsive = {
   superLargeDesktop: {
@@ -25,7 +29,7 @@ const responsive = {
   },
 };
 
-//componentes
+//Creamos la funcion carrusel. Esta se hizo con una funcion propia del react
 const Carrusel = () => {
   return (
     <Carousel

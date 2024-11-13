@@ -1,19 +1,23 @@
+//Carrito_Val.js
 import { useEffect, useState } from 'react';
 
+//Creamos el validador de carrito
 const useCarrito = () => {
-    const [Carrito, setCarrito] = useState([]); // Estado para almacenar los productos del carrito
-    const [error, setError] = useState(null); // Estado para manejar errores
+    const [Carrito, setCarrito] = useState([]); // Estado del carrito
+    const [error, setError] = useState(null); // Estado errores
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        //hacemos fetch para comunicarnos con la api creada
         const fetchCarrito = async () => {
             try {
+                //Ruta del api
                 const response = await fetch('http://localhost:3000/api/Carrito');
                 if (!response.ok) {
                     throw new Error(`Error en la respuesta: ${response.status}`);
                 }
-                const data = await response.json(); // Convertir los datos a formato JSON
-                setCarrito(data); // Almacenar los datos en el estado
+                const data = await response.json(); //Almacena la respuesta en data
+                setCarrito(data);
             } catch (err) {
                 setError(`Error al cargar el carrito: ${err.message}`); // Establecer el mensaje de error
             } finally {
@@ -21,8 +25,8 @@ const useCarrito = () => {
             }
         };
 
-        fetchCarrito(); // Ejecutar la función para obtener los datos
-    }, []); // La dependencia vacía asegura que esto se ejecute una sola vez al cargar el componente
+        fetchCarrito(); // Ejecutamos
+    }, []);
 
     // Función para eliminar un producto del estado local
     const eliminarProducto = (producto) => {

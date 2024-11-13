@@ -1,14 +1,18 @@
+//info.jsx
 import React from 'react'
 import acrilicoo from '/src/components/acrilicoo.jpg';
 import digital from '/src/components/digital.jpg';
 import estuche from '/src/components/estuche.jpg';
 import lienzo from '/src/components/lienzo.jpg';
+//importamos estilos
 import './Info.css'
 
 import Menu from '../../menu/Menu';
 import Footer from '../../footer/Footer';
 
+//Creamos la funcion productos, esta es una estatica que cuenta con un boton para ejecutar la interfaz productos
 const productos = [
+  //Imagen 1 con descripcion
   {
     id: 1,
     imagen: acrilicoo,

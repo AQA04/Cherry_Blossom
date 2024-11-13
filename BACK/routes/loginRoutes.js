@@ -1,10 +1,10 @@
-
+//LoginRoutes.js
 import express from 'express';
-import LoginControl from '../controllers/LoginControl.js'; // Importar la función del controlador
+import LoginControl from '../controllers/LoginControl.js';
 
 const router = express.Router();
 
-// Definir la ruta POST para autenticar a un usuario
+// Definimos la ruta GET para autenticar a un usuario
 router.get('/', async (req, res) => {
     const results = await LoginControl();
     

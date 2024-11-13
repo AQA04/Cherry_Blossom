@@ -1,13 +1,17 @@
+//Pagos.jsx
 import React, { useState, useEffect } from 'react';
+//importamos estilos
 import './Pagos.css';
 
+//Creamos funcion de pagos
 const Pagos = () => {
-  const [cardNumber, setCardNumber] = useState('');
-  const [expiryDate, setExpiryDate] = useState('');
-  const [cvc, setCvc] = useState('');
+  const [cardNumber, setCardNumber] = useState(''); //Almacena el numero
+  const [expiryDate, setExpiryDate] = useState(''); //Almacena la exp
+  const [cvc, setCvc] = useState(''); //Almacena el CVC
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
+  //Boton que valida si los datos estan bien
   const handleSubmit = (event) => {
     event.preventDefault();
     // Validación simple
@@ -20,6 +24,7 @@ const Pagos = () => {
     setError('');
   };
 
+  //Submit y devolver a la pagina principal
   useEffect(() => {
     if (success) {
       const timer = setTimeout(() => {

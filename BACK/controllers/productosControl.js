@@ -1,4 +1,4 @@
-// controllers/productosControl.js
+// productosControl.js
 import createConnection from '../DB/database.js';
 
 async function busquedaProductos(Tipo_Producto) {
@@ -7,7 +7,7 @@ async function busquedaProductos(Tipo_Producto) {
     try {
         connection = await createConnection();
 
-        // Realizar la consulta a la base de datos filtrando por Tipo_Producto
+        // Realizar la consulta a la base de datos segun la categoria que sea necesitada
         const [results] = await connection.query(
             'SELECT ID_Producto, Precio, Descripcion FROM Productos WHERE Tipo_Producto = ?',
             [Tipo_Producto] // Usar el parámetro para la consulta
@@ -17,9 +17,10 @@ async function busquedaProductos(Tipo_Producto) {
 
     } catch (err) {
         console.error('Error en la conexión o en la consulta:', err);
-        throw err; // Lanzar el error para que pueda ser manejado por el llamador
+        throw err; // Lanzar el error por si acaso
 
     } finally {
+        //Siempre terminar la conexion
         if (connection) {
             await connection.end();
         }

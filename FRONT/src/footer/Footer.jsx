@@ -1,8 +1,10 @@
+//Footer.jsx
 import React from 'react'
+//Importamos estilos del css
 import './Footer.css'
-
 import logoFooter from '../components/logo_negro_sinFondo.png'
 
+//Creamos la funcion. Esta es una funcion estatica, lo unico dinamico son los hipervinculos en el logo y el texto
 const Footer = () => {
     return (
       <> 

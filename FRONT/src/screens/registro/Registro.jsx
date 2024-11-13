@@ -1,18 +1,22 @@
+//Registro.jsx
 import React, { useState } from 'react';
+//importamos estilos
 import './registro.css';
 import iconoRegistro from '/src/Components/iconoPerfil.png';
 import signupUsuarioValidation from './Registro_Val.js'; 
 import { ToastContainer, toast } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css'; 
 
+//Creamos la funcion registro
 const Registro = () => {
-    const [nombreReg, setNombreReg] = useState("");
-    const [apellidoReg, setApellidoReg] = useState("");
-    const [telefonoReg, setTelefonoReg] = useState("");
-    const [direccionReg, setDireccionReg] = useState("");
-    const [correo, setCorreo] = useState("");
-    const [contrasenaReg, setContrasenaReg] = useState("");
+    const [nombreReg, setNombreReg] = useState(""); //Almacenamos los datos de los inputs
+    const [apellidoReg, setApellidoReg] = useState(""); //Almacenamos los datos de los inputs
+    const [telefonoReg, setTelefonoReg] = useState(""); //Almacenamos los datos de los inputs
+    const [direccionReg, setDireccionReg] = useState(""); //Almacenamos los datos de los inputs
+    const [correo, setCorreo] = useState(""); //Almacenamos los datos de los inputs
+    const [contrasenaReg, setContrasenaReg] = useState(""); //Almacenamos los datos de los inputs
 
+    //Boton que hace la validacion de los datos y permite ingresar
     const handleButtonIngresar = async (event) => {
         event.preventDefault(); 
         console.log("Un texto", nombreReg, apellidoReg, telefonoReg, direccionReg, correo, contrasenaReg);
@@ -30,12 +34,14 @@ const Registro = () => {
                 
                 toast.error(result.message);
             }
+            //Por si las moscas
         } catch (error) {
             console.error('Error al registrar el usuario:', error);
             toast.error('Error al registrar el usuario');
         }
     };
 
+    //Nos retorna a la pagina home
     const handleButtonCancelar = () => {
         window.location.href = './';
     };

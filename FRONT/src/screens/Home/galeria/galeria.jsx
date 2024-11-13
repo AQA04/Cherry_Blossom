@@ -1,4 +1,7 @@
+//galeria.jsx
 import React from 'react'
+
+//importamos estilos
 import './galeria.css'
 
 //imagenes
@@ -8,7 +11,7 @@ import img3 from '/src/Components/galeriaGanyu.jpg'
 import img4 from '/src/Components/galeriaWinry.jpg'
 import img5 from '/src/Components/galeriaDavier.jpg'
 
-
+//Creamos la funcion galeria
 const galeria = () => {
   return (
     <>

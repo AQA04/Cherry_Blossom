@@ -1,6 +1,9 @@
-import express from 'express'; // Asegúrate de usar la sintaxis de importación ES
-import cors from 'cors'; // Importa CORS
-import config from './config.js'; // Importa tu configuración
+//Index.js
+
+//Todas las importaciones necesarias
+import express from 'express'; 
+import cors from 'cors'; 
+import config from './config.js';
 import carritoRoutes from './routes/carritoRoutes.js';
 import historialRoutes from './routes/historialRoutes.js';
 import loginRoutes from './routes/loginRoutes.js';
@@ -9,7 +12,7 @@ import singupRoutes from './routes/singupRoutes.js';
 import loginUsuario from './controllers/LoginControl.js';
 
 
-
+//Habilitamos el express
 const app = express();
 
 // Configuración de CORS
@@ -37,7 +40,7 @@ app.get('/', (req, res) => {
     res.send('¡Hola, mundo!');
 });
 
-// Middleware para manejar errores
+// Middleware para manejar errores -- Recomendacion de un profesional
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Algo salió mal!');

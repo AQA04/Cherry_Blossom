@@ -1,9 +1,10 @@
+//App.jsx, la madre
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 /*-----Components-----*/
 import './App.css';
 
-
+//Importamos todos los componentes y screens del codigo
 import Home from './screens/Home/Home';
 import Info from './screens/info/Info';
 import Login from './screens/login/Login';
@@ -17,15 +18,15 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} /> {/* ruta raíz a /Home */}
-        <Route path="/Home" element={<Home />} /> 
-        <Route path="/Info" element={<Info />} />
-       <Route path="/Login" element={<Login />} />
-        <Route path="/Productos" element={<Productos />} />
-        <Route path="/carrito" element={<Carrito />} />
-        <Route path="/registro" element={<Registro />} />
-        <Route path="/Historial" element={<Historial />} />
-        <Route path="/Pagos" element={<Pagos />} />
+        <Route path="/" element={<Home />} /> {/*Creamos la ruta e instanciamos el componente*/}
+        <Route path="/Home" element={<Home />} /> {/*Creamos la ruta e instanciamos el componente*/}
+        <Route path="/Info" element={<Info />} /> {/*Creamos la ruta e instanciamos el componente*/}
+       <Route path="/Login" element={<Login />} /> {/*Creamos la ruta e instanciamos el componente*/}
+        <Route path="/Productos" element={<Productos />} /> {/*Creamos la ruta e instanciamos el componente*/}
+        <Route path="/carrito" element={<Carrito />} /> {/*Creamos la ruta e instanciamos el componente*/}
+        <Route path="/registro" element={<Registro />} /> {/*Creamos la ruta e instanciamos el componente*/}
+        <Route path="/Historial" element={<Historial />} /> {/*Creamos la ruta e instanciamos el componente*/}
+        <Route path="/Pagos" element={<Pagos />} />{/*Creamos la ruta e instanciamos el componente*/}
       </Routes>
     </BrowserRouter>
   );

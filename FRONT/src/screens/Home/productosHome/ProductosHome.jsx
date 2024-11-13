@@ -1,13 +1,14 @@
+//ProductosHome.jsx
 import React from 'react'
 
+//Importamos estilos
 import './ProductosHome.css'
 import estuche from '/src/components/estucheEjemplo.jpg'
 import lienzo from '/src/components/lienzoEjemplo.jpg'
 import acrilico from '/src/components/acrilicoEjemplo.jpg'
 import digital from '/src/components/digitalEjemplo.jpg'
 
-
-
+//Exportamos por default los productos vistos como una card
 export default function Productos() {
 
   const handleButtonClick = () => {

@@ -1,4 +1,4 @@
-
+//Ejemplo de la busqueda por formato json
 export const data = [
 	{
 		id: 1,

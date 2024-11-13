@@ -4,7 +4,7 @@ import busquedaHistorial from '../controllers/historialControl.js'; // Importar 
 
 const router = express.Router();
 
-// Definir la ruta GET para buscar todo el historial
+// Definimos la ruta GET para buscar todo el historial
 router.get('/', async (req, res) => {
     try {
         const results = await busquedaHistorial();

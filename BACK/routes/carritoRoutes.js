@@ -1,13 +1,14 @@
-
+//CarritoRoutes.js
 import express from 'express';
 import CarritoControl from '../controllers/carritoControl.js'; 
 
 const router = express.Router();
 
-// Definir la ruta POST para autenticar al carrito
+// Definimos la ruta GET para autenticar al carrito
 router.get('/', async (req, res) => {
     const results = await CarritoControl();
-    
+
+    //Retornar resultados
     try {
         res.json(results); 
     } catch (error) {

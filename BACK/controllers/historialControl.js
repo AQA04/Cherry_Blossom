@@ -1,4 +1,5 @@
 ///historialControl.js
+
 import createConnection from '../DB/database.js';
 
 async function busquedaHistorial() {
@@ -7,6 +8,7 @@ async function busquedaHistorial() {
     try {
         connection = await createConnection();
 
+        //Consultamos todos los datos que coincidan con la id del usuario, y traemos los pagos con esa ID, mediante innerjoin
         const [results] = await connection.query(
             `SELECT 
               h.Id_Usuario, 
@@ -23,9 +25,10 @@ async function busquedaHistorial() {
 
     } catch (err) {
         console.error('Error en la conexión o en la consulta:', err);
-        throw err; // Lanzar el error para que pueda ser manejado por el llamador
+        throw err; // Lanzar error por si algo falla
 
     } finally {
+        //Siempre terminar la conexion
         if (connection) {
             await connection.end();
         }

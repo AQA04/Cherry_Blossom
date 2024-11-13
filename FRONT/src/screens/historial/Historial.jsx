@@ -1,18 +1,22 @@
+//Historial.jsx
 import React from 'react';
 import useHistorial from './Historial_Val';
 import './Historial.css';
 
+//Importamos el menu y el footer
 import Menu from '../../menu/Menu';
 import Footer from '../../footer/Footer';
 
-
+//Creamos la funcion historial
 const Historial = () => {
     const { historial, error, loading } = useHistorial(); //hook para obtener datos
 
+    //Pantalla de carga
     if (loading) {
         return <p>Cargando...</p>; 
     }
 
+    //Por si las moscas
     if (error) {
         return <p className="error">{error}</p>; 
     }

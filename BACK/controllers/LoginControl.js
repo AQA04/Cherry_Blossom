@@ -1,4 +1,4 @@
-
+//LoginControl.js
 import createConnection from '../DB/database.js';
 
 async function LoginControl() {
@@ -7,6 +7,7 @@ async function LoginControl() {
     try {
         connection = await createConnection();
 
+        //Traemos todos los usuarios de la tabla usuarios
        try {
         const [results] = await connection.query(
              'SELECT * FROM Usuarios'
@@ -19,6 +20,7 @@ async function LoginControl() {
 
     
     } finally {
+        //Siempre terminar la conexion
         if (connection) {
             await connection.end();
         }

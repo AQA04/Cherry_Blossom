@@ -1,7 +1,9 @@
+//Login.jsx
 import React from 'react'
 import '../aboutUs/aboutUs.css'
 import dueña from '/src/components/dueña.jpg'
 
+//Creamos el estatico de about us, esto simplemente es texto
 const AboutUs = () => {
   return (
     <>
@@ -12,10 +14,6 @@ const AboutUs = () => {
         <p></p>
         <p>Hola, Soy Lilith, artista detras de Cherry Blossom</p>      
         <p>Soy un artista apasionado por la exploración de emociones y conceptos a través de mi arte. Mi trabajo fusiona acrílicos, estuches, lienzos y dibujos digitales con un enfoque mas caricatura, chibi, anime y dark , buscando dar una satisfaccion personalizada. Cada pieza es una invitación a un diálogo visual y emocional único.</p>
-        
-        <div>
-          icono
-        </div>
 
         </div>
 
