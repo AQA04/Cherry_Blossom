@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './registro.css';
 import iconoRegistro from '/src/Components/iconoPerfil.png';
-import signupUsuarioValidation from './Registro_Val.js'; // Asegúrate de que la ruta sea correcta
-import { ToastContainer, toast } from 'react-toastify'; // Importa ToastContainer y toast
-import 'react-toastify/dist/ReactToastify.css'; // Importa los estilos de react-toastify
+import signupUsuarioValidation from './Registro_Val.js'; 
+import { ToastContainer, toast } from 'react-toastify'; 
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const Registro = () => {
     const [nombreReg, setNombreReg] = useState("");
@@ -14,12 +14,12 @@ const Registro = () => {
     const [contrasenaReg, setContrasenaReg] = useState("");
 
     const handleButtonIngresar = async (event) => {
-        event.preventDefault(); // Previene el comportamiento por defecto del formulario
+        event.preventDefault(); 
         console.log("Un texto", nombreReg, apellidoReg, telefonoReg, direccionReg, correo, contrasenaReg);
         try {
             const result = await signupUsuarioValidation(nombreReg, apellidoReg, telefonoReg, direccionReg, correo, contrasenaReg);
             if (result.success) {
-                // Muestra un toast de éxito
+                
                 toast.success(result.message);
 
                 setTimeout(() => {
@@ -27,12 +27,12 @@ const Registro = () => {
               }, 5000);
               
             } else {
-                // Muestra un toast de error
+                
                 toast.error(result.message);
             }
         } catch (error) {
             console.error('Error al registrar el usuario:', error);
-            toast.error('Error al registrar el usuario'); // Muestra un mensaje de error genérico
+            toast.error('Error al registrar el usuario');
         }
     };
 

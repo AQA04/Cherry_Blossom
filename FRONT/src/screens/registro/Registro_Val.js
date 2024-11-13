@@ -1,5 +1,5 @@
 const signupUsuario = async (nombreReg, apellidoReg, telefonoReg, direccionReg, correo, contrasenaReg) => {
-    const url = 'http://localhost:3000/api/Singup'; // Asegúrate de que esta URL sea correcta
+    const url = 'http://localhost:3000/api/Singup'; 
 
     const userData = {
         userNombre: nombreReg,
@@ -10,7 +10,7 @@ const signupUsuario = async (nombreReg, apellidoReg, telefonoReg, direccionReg, 
         userContraseña: contrasenaReg,
     };
 
-    console.log(userData); // Imprime los datos del usuario en la consola para depuración
+    console.log(userData); 
     try {
         const response = await fetch(url, {
             method: 'POST',
@@ -23,17 +23,17 @@ const signupUsuario = async (nombreReg, apellidoReg, telefonoReg, direccionReg, 
         const data = await response.json();
 
         if (response.ok) {
-            // Si la respuesta es exitosa, imprime el mensaje y el ID del usuario
+            
             console.log(data.message, 'Usuario ID:', data.userId);
         } else {
-            // Si hay un error, imprime el mensaje de error
+           
             console.error(data.message);
         }
 
-        return data; // Retorna los datos de la respuesta
+        return data; 
     } catch (error) {
         console.error('Error:', error.message);
-        throw error; // Lanza el error para que pueda ser manejado en el componente
+        throw error; 
     }
 };
 
