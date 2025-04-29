@@ -12,7 +12,7 @@ const Footer = () => {
           <div id='padreFooter'>
 
             <div className='logoFooter'>{/*logo, nombre de la tienda */}
-              <img src={logoFooter} className="logoFooter"></img>
+              <img className="logoFooter" src={logoFooter} alt="logoFooter" />
               <p>@Cherry Blossom Store</p>
             </div>
 
