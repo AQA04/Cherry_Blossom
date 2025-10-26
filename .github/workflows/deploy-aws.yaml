@@ -1,0 +1,105 @@
+name: CI/CD - Despliegue Condicional (EKS o ECS)
+
+on:
+  push:
+    branches:
+      - main
+  # 1. Permite la ejecución manual y define la elección del servicio
+  workflow_dispatch:
+    inputs:
+      deployment_target:
+        description: 'Servicio de destino en AWS (EKS o ECS)'
+        required: true
+        type: choice
+        options:
+          - EKS
+          - ECS
+
+# 2. Definición de Variables de Entorno
+env:
+  AWS_REGION: us-east-1                   # 🚨 CAMBIA ESTO: Tu región de AWS
+  ECR_REPOSITORY: cherry-blossom-repo     # 🚨 CAMBIA ESTO: Nombre de tu repositorio ECR
+  EKS_CLUSTER_NAME: cluster-uni           # 🚨 CAMBIA ESTO: Nombre de tu clúster EKS
+  ECS_CLUSTER_NAME: cluster-prod          # 🚨 CAMBIA ESTO: Nombre de tu clúster ECS
+  ECS_SERVICE_NAME: cherry-blossom-service # 🚨 CAMBIA ESTO: Nombre de tu servicio ECS
+  ECS_CONTAINER_NAME: php-web-container   # 🚨 CAMBIA ESTO: Nombre del contenedor en tu task-definition.json
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇ Checkout Código
+        uses: actions/checkout@v4
+      
+# ----------------------------------------------------
+# FASE 1: AUTENTICACIÓN, CONSTRUCCIÓN Y PUSH A ECR
+# Estos pasos son comunes para EKS y ECS
+# ----------------------------------------------------
+      - name: 🔑 Configurar Credenciales AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: 🐳 Login a Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+      
+      - name: 🔨 Construir y Subir Imagen Docker
+        id: build-image
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          IMAGE_TAG: ${{ github.sha }} 
+        run: |
+          # Construye la imagen usando el Dockerfile en la raíz
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          # Sube la imagen a ECR
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          # Exporta la URI de la imagen para los pasos de despliegue
+          echo "IMAGE_URI=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_ENV
+
+# ----------------------------------------------------
+# FASE 2: DESPLIEGUE CONDICIONAL EN EKS
+# Se ejecuta si el parámetro de entrada es 'EKS'
+# ----------------------------------------------------
+      - name: ☸ Configurar Kubectl para EKS
+        if: github.event.inputs.deployment_target == 'EKS'
+        uses: aws-actions/amazon-eks-setup@v2
+        with:
+          cluster-name: ${{ env.EKS_CLUSTER_NAME }}
+
+      - name: 📝 Actualizar Manifiesto de Kubernetes
+        # Reemplaza un marcador de posición en el deployment.yaml con la nueva URI de la imagen
+        if: github.event.inputs.deployment_target == 'EKS'
+        run: |
+          sed -i "s|<IMAGE_URI_PLACEHOLDER>|${{ env.IMAGE_URI }}|g" k8s/deployment.yaml
+          
+      - name: 🚀 Aplicar Manifiestos en EKS
+        if: github.event.inputs.deployment_target == 'EKS'
+        run: |
+          kubectl apply -f k8s/deployment.yaml
+          kubectl apply -f k8s/service.yaml
+
+# ----------------------------------------------------
+# FASE 2: DESPLIEGUE CONDICIONAL EN ECS
+# Se ejecuta si el parámetro de entrada es 'ECS'
+# ----------------------------------------------------
+      - name: 📄 Renderizar Task Definition de ECS
+        # Rellena el task-definition.json con la URI de la imagen construida
+        if: github.event.inputs.deployment_target == 'ECS'
+        id: render-container
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          # 🚨 RUTA A TU ARCHIVO DE TASK DEFINITION JSON 🚨
+          task-definition: ecs/task-definition.json
+          container-name: ${{ env.ECS_CONTAINER_NAME }} 
+          image: ${{ env.IMAGE_URI }}
+
+      - name: 🔄 Desplegar en Amazon ECS
+        if: github.event.inputs.deployment_target == 'ECS'
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: ${{ steps.render-container.outputs.task-definition }}
+          service: ${{ env.ECS_SERVICE_NAME }}
+          cluster: ${{ env.ECS_CLUSTER_NAME }}
